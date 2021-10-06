@@ -18,6 +18,24 @@ Notes: Pour utiliser une github action, il suffit de référencer le repo, par d
 
 ##==##
 
+# Documentation
+<!-- .slide: class="full-center" -->
+
+TODO 
+
+Notes: TODO
+
+##==##
+
+# Out of the box
+<!-- .slide: class="full-center" -->
+
+TODO 
+
+Notes: TODO
+
+##==##
+
 # "Builtin" actions
 
 Github provides a lot of actions
@@ -60,32 +78,6 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 
 ##==##
 
-# github-script... an example
-<!-- .slide: class="big-code" -->
-```yaml
-on:
-  issues:
-    types: [opened]
-jobs:
-  comment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/github-script@v3
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
-            })
-```
-
-Notes: github-script permets d'intéragir avec l'api Github très simplement. github-script inject un client github authentifié avec Github Token. Par exemple, ici on va réagir à la création d'une nouvelle issue, à laquelle on va rajouter un commentaire.
-
-##==##
-
 # Github Automation
 
 - [actions/create-release](https://github.com/actions/create-release) - An Action to create releases via the GitHub Release API.
@@ -102,6 +94,43 @@ Notes: github-script permets d'intéragir avec l'api Github très simplement. gi
 You can develop your own Github action !!!
 
 Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant, on peut développer ses propres Github action ! ... 2 possibilités
+
+##==##
+
+# Marketplace
+
+![marketplace](./assets/images/marketplace.png)
+
+Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une fois votre action créé, vous pouvez la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
+
+##==##
+
+# [Starter-workflows](https://github.com/actions/starter-workflows)
+
+![marketplace](./assets/images/starter-workflows.png)
+
+Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
+
+##==##
+
+# Collections of Github Actions
+
+* [github.com/google-github-actions](https://github.com/google-github-actions)
+* [github.com/Azure/actions](https://github.com/Azure/actions)
+* [github.com/aws-actions](https://github.com/aws-actions)
+* [sdras/awesome-actions](https://github.com/sdras/awesome-actions) - A curated list of awesome actions to use on GitHub
+
+Notes: 
+
+##==##
+
+# But Jenkins has plugins
+
+* Github Action are way more lightweight
+* It is not attached to an instance
+* You can develop it in any language
+
+Notes: TODO
 
 ##==##
 
@@ -146,39 +175,6 @@ Notes: core qui permets de travailler avec l'api de Github Actions, et github po
 * Template : [actions/container-action](https://github.com/actions/container-action)
 
 Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
-
-##==##
-
-# Marketplace
-
-![marketplace](./assets/images/marketplace.png)
-
-Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une fois votre action créé, vous pouvez la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
-
-##==##
-
-# [Starter-workflows](https://github.com/actions/starter-workflows)
-
-![marketplace](./assets/images/starter-workflows.png)
-
-Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
-
-##==##
-
-# Collections of Github Actions
-
-* [github.com/google-github-actions](https://github.com/google-github-actions)
-* [github.com/Azure/actions](https://github.com/Azure/actions)
-* [github.com/aws-actions](https://github.com/aws-actions)
-* [sdras/awesome-actions](https://github.com/sdras/awesome-actions) - A curated list of awesome actions to use on GitHub
-
-##==##
-
-# But Jenkins has plugins
-
-* Github Action are way more lightweight
-* It is not attached to an instance
-* You can develop it in any language
 
 ##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
@@ -281,11 +277,3 @@ jobs:
 
 Notes: pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée. Pour les PR de repos forké,
 le TOKEN a des droits read only.
-
-##==##
-<!-- .slide: class="transition sfeir-bg-red" -->
-# Thx !
-
-##==##
-<!-- .slide: class="transition sfeir-bg-red" -->
-# Questions ? 

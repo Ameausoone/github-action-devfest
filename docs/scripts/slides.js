@@ -12,15 +12,15 @@ function then_github_action() {
 }
 
 function github_actions_use_it() {
-  return ['04a-github-actions-use-it/00-what-is.md']
+  return ['04a-github-actions-use-it/00-what-is.md', '04a-github-actions-use-it/01-security.md']
 }
 
 function github_actions_how_to_write() {
-  return ['04b-github-actions-how-to-write/']
+  return ['04b-github-actions-how-to-write/00-how-to-write.md','04b-github-actions-how-to-write/01-advise-to-write.md']
 }
 
-function github_actions_advise_to_write() {
-  return ['04c-github-actions-advise-to-write/']
+function finish(){
+  return ['05-end/00-finish.md']
 }
 
 function formation() {
@@ -31,7 +31,7 @@ function formation() {
     ...then_github_action(),
     ...github_actions_use_it(),
     ...github_actions_how_to_write(),
-    ...github_actions_advise_to_write()
+    ...finish()
   ].map(slidePath => {
     return { path: slidePath };
   });
