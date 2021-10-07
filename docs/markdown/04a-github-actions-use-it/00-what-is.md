@@ -3,10 +3,10 @@
 
 * Unit action
 * With Inputs and Outputs
-* With documentation !
+* With documentation `README.md` !
 * Easily interact with Pipeline, git and Github API
 
-Notes: C'est une action unitaire, avec des valeurs en entrées, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
+Notes: C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
 
 ##==##
 
@@ -17,22 +17,10 @@ Notes: C'est une action unitaire, avec des valeurs en entrées, qui a accès au 
 Notes: Pour utiliser une github action, il suffit de référencer le repo, par défaut, ça utilise la branche par défaut, mais on peut spécifier une autre branche, un tag, ou un commitId, on va voir plus loin l'intérêt que ça a. ... Alors Github fourni une série de Github action
 
 ##==##
-
-# Documentation
-<!-- .slide: class="full-center" -->
-
-TODO 
-
-Notes: TODO
-
-##==##
-
+<!-- .slide: class="transition sfeir-bg-red" -->
 # Out of the box
-<!-- .slide: class="full-center" -->
 
-TODO 
-
-Notes: TODO
+Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
 
 ##==##
 
@@ -42,6 +30,8 @@ Github provides a lot of actions
 - [actions/checkout](https://github.com/actions/checkout) - Setup your repository on your workflow.
 - [actions/cache](https://github.com/actions/cache) - Cache dependencies and build outputs in GitHub Actions.
 - [github/super-linter](https://github.com/github/super-linter) - Linter for a lot of languages
+- [github/codeql-action](https://github.com/github/codeql-action) - Run Codeql
+- [...]
 
 Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour installer vos dépendances, pour java, node, python etc. Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
 
@@ -88,6 +78,14 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 - [actions/delete-package-versions](https://github.com/actions/delete-package-versions) - Delete versions of a package from GitHub Packages.
 
 ##==##
+
+# [Starter-workflows](https://github.com/actions/starter-workflows)
+
+![marketplace](./assets/images/starter-workflows.png)
+
+Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
+
+##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Or by the community...
 
@@ -105,22 +103,23 @@ Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une f
 
 ##==##
 
-# [Starter-workflows](https://github.com/actions/starter-workflows)
+# Interact with Cloud
 
-![marketplace](./assets/images/starter-workflows.png)
+* [google-github-actions](https://github.com/google-github-actions) - Interact with GCP 
+* [Azure/actions](https://github.com/Azure/actions) - Azure
+* [aws-actions](https://github.com/aws-actions) - AWS
 
-Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
+Notes: 
 
 ##==##
 
-# Collections of Github Actions
+# Awesome actions
 
-* [github.com/google-github-actions](https://github.com/google-github-actions)
-* [github.com/Azure/actions](https://github.com/Azure/actions)
-* [github.com/aws-actions](https://github.com/aws-actions)
 * [sdras/awesome-actions](https://github.com/sdras/awesome-actions) - A curated list of awesome actions to use on GitHub
 
-Notes: 
+![marketplace](./assets/images/awesome-actions.png)
+
+Notes: Un point d'entrée pour découvrir des github actions communautaire.
 
 ##==##
 
@@ -131,149 +130,3 @@ Notes:
 * You can develop it in any language
 
 Notes: TODO
-
-##==##
-
-# Two ways :
-
-* Javascript action (also Typescript)
-* Or Container action
-* Github provides templates on [github.com/actions](https://github.com/actions)
-
-Notes: 2 types de github action : javascript action ou une container action. Pour ces 2 types, il existe des templates pour ne pas partir de zéro que vous trouverez sur github.com/actions
-
-##==##
-
-# Javascript action
-
-* Run natively on host
-* Perfect for interact with Github API (others API also)
-* For High-level action
-* Recommended choice
-* Template : [actions/javascript-action](https://github.com/actions/javascript-action)
-
-Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouvez l'écrire en javascript ou en typescript. C'est plutôt l'action privilégié par Github. Si vous avez besoin d'intéragir avec une API, c'est le choix idéal. ... Il y a d'ailleurs 2 librairies npm disponibles
-
-##==##
-
-# Two (main) npm libraries
-
-* @actions/core => to interact with Github action workflow(inputs,env var, etc)
-* @action/github => to interact with Github API
-
-Notes: core qui permets de travailler avec l'api de Github Actions, et github pour intéragir avec l'api Github. Mais évidemment, et c'est tout l'intérêt, vous pouvez importer n'importe quelle librairie npm.
-
-##==##
-
-# Container action
-
-* Based on a docker image + your shell script
-* Very easy to start with
-* Only compatible with Linux Host
-* A fewer longer to start
-* Interact with workflow by shell api
-* Template : [actions/container-action](https://github.com/actions/container-action)
-
-Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
-
-##==##
-<!-- .slide: class="transition sfeir-bg-red" -->
-# Security
-
-Github Action : the 'S' stands for Security.
-
-Notes: 36:26:40 Github action est donc très pratique, mais n'est pas exempt de défaut, notamment niveau sécurité, on va voir 2 problèmes notamment.
-
-##==##
-
-# The "left-pad" effect
-
-* What happens if an owner delete his action ?
-
-* A "archived" repo still works
-* Use well-known Github action
-* Fork it in your org
-
-Notes: que se passe-t-il si le propriétaire supprime une action. ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
-
-##==##
-
-# The "event-stream" effect
-
-* What happens if an owner mine bitcoin with his action ?
-
-* Use commitId as reference:
-
-```yaml
-- uses: rlespinasse/github-slug-action@cc560ad
-```
-
-* Dependabot will even make PR with most recent commitId
-
-Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets à jour son action pour miner du bitcoin sur vos runners, si vous utilisez la branche par défaut, ou une branche, ou même un tag. Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le long. Dans ce cas, vous êtes sûr d'utiliser une version fixe de la github action.
-
-##==##
-
-# Use dependabot
-
-`.github/dependabot.yml`
-```yaml
-version: 2
-updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-```
-
-Notes: Et vous pouvez même utiliser dependabot, pour maintenir vos github actions à jour  !
-
-##==##
-
-# Checkout
-
-```yaml
-- uses: actions/checkout@v2
-  with:
-    # default : true
-    persist-credentials: false
-```
-
-Notes: Par défaut, quand l'action checkout fait un clone de votre repo, la configuration git du workspace permets d'exécuter des commandes git authentifié, donc si vous n'en avez pas besoin d'effectuer, n'hésitez pas à utiliser l'option persist-credentials, pour que votre code soit en "lecture seule".
-
-##==##
-
-# Secrets
-
-* Set secrets in your repo settings and inject them in your pipeline.
-
-```yaml
-steps:
-  - name: Hello world action
-    with: # Set the secret as an input
-      super_secret: ${{ secrets.SuperSecret }}
-    env: # Or as an environment variable
-      super_secret: ${{ secrets.SuperSecret }}
-```
-
-Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs.
-
-##==##
-
-# GITHUB_TOKEN
-
-```yaml
-name: Pull request labeler
-on:
-- pull_request
-jobs:
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-```
-
-Notes: pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée. Pour les PR de repos forké,
-le TOKEN a des droits read only.

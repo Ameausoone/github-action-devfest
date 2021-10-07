@@ -1,6 +1,6 @@
 // One method per module
 function intro() {
-  return ['01-Intro/00-title.md', '01-Intro/speaker-ame.md','01-Intro/02-experience.md'];
+  return ['01-Intro/00-title.md', '01-Intro/01-speaker-ame.md','01-Intro/02-experience.md'];
 }
 
 function cicd_journey() {
@@ -16,7 +16,8 @@ function github_actions_use_it() {
 }
 
 function github_actions_how_to_write() {
-  return ['04b-github-actions-how-to-write/00-how-to-write.md','04b-github-actions-how-to-write/01-advise-to-write.md']
+  return ['04b-github-actions-how-to-write/00-how-to-write.md']
+  // TODO ,'04b-github-actions-how-to-write/01-advise-to-write.md'
 }
 
 function finish(){

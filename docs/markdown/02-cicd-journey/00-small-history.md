@@ -1,12 +1,12 @@
 <!-- .slide: class="transition sfeir-bg-red" -->
 
-# a small Continuous Integration History 
+# A CICD Journey
 
 Notes: 1:46:40 Alors je voulais centrer ma présentation sur l'expérience que les développeurs, et comment Github Actions, à mon avis, facilite le travail des développeurs et des DevOps. Pour comprendre l'expérience actuel que les développeurs ont avec la CICD, je voulais d'abord refaire un petit historique de la CICD de ses 10 dernière années, et j'aimerais savoir si vous l'avez ressenti comme moi ? 
 
 ##==##
 <!-- .slide: class="full-center" -->
-# First Jenkins
+# First : Jenkins
 
 ![Jenkins Form](./assets/images/jks-create-job.png)
 
@@ -28,10 +28,27 @@ Notes: OK là aussi c'est cool, ça nous facilite la vie, on a toutes les option
 <!-- .slide: class="big-code" -->
 
 ```shell script
-wget -qO- http://mywebsite.com/ |
-grep -Eoi '<a [^>]+>' | 
-grep -Eo 'href="[^\"]+"' | 
-grep -Eo '(http|https)://[^/"]+'
+#!/usr/bin/env bash
+
+# Exit on error. Append "|| true" if you expect an error.
+set -o errexit
+# Exit on error inside any functions or subshells.
+set -o errtrace
+# Do not allow use of undefined vars. Use ${VAR:-} to use an undefined VAR
+set -o nounset
+# Catch the error in case mysqldump fails (but gzip succeeds) in `mysqldump |gzip`
+set -o pipefail
+# Turn on traces, useful while debugging but commented out by default
+# set -o xtrace
+
+# Set magic variables for current file, directory, os, etc.
+__dir="$(cd "$(dirname "${BASH_SOURCE[${__b3bp_tmp_source_idx:-0}]}")" && pwd)"
+__file="${__dir}/$(basename "${BASH_SOURCE[${__b3bp_tmp_source_idx:-0}]}")"
+__base="$(basename "${__file}" .sh)"
+# shellcheck disable=SC2034,SC2015
+__invocation="$(printf %q "${__file}")$( (($#)) && printf ' %q' "$@" || true)"
+
+arg1="${1:-}"
 ``` 
 
 Notes: Alors on a souvent ajouté du shell, pour parser du texte, extraire un commit, urlisé une branche, etc. Avec une couche de jq, de regex, et de curl, et quand un dév avait un bug là dedans, bon on appelle son devops préféré, parce que évidemment, c'est lui qui maîtrise. Alors encore une fois c'est cool mais maintenant j'ai des pipelines complexes, mais pour les maintenir sur tous mes projets, ça commence à être galére. ...Du coup...
@@ -43,6 +60,7 @@ Notes: Alors on a souvent ajouté du shell, pour parser du texte, extraire un co
 * `Jenkinsfile`
 * `.travis.yml`
 * `.gitlab-ci.yml`
+* `.circleci/config.yml`
 
 Notes: Ok on va écrire notre pipeline, et maintenant je peux mettre des conditions, parser des variables d'environnement en groovy. Ajouter des conditions complexes mieux intégré. ... Et là dessus, on va rajouter une petite couche. 
 
@@ -74,9 +92,10 @@ Notes: on va faire tourner nos jobs dans des conteneurs docker, du coup, on a pl
 .gitlab-ci.yml
 ```yaml
 include:
-  - project: 'my-shared-libraries'
+  - project: 'shared-libraries'
     ref: master
-    file: 'complexe-pipeline.yml'
+    # Try to touch this !
+    file: 'complexe-pipeline-used-by-a-lot-of-projects.yml'
 ```
 
 Notes: et donc pour les développeurs, quand ils veulent rajouter une étape au pipeline, ou changer la version de node...

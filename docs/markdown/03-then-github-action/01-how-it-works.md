@@ -34,17 +34,17 @@ Notes: Généralement l'event qui va déclencher un pipeline, ce sera le commit,
 <!-- .slide: class="big-code" -->
 ```yaml
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
+  # Trigger the workflow on push or pull request
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - feat/*
-  # Triggered when add a comment on an issue
+
+  # when add a comment on an issue
   issue_comment:
     types: [created]
+
+  # when a new release is created
   release:
     types:
       - created
@@ -78,11 +78,13 @@ Notes: Alors ici simplement, vous avez le mot clé `jobs`. Et ensuite, vous pouv
 <!-- .slide: class="with-code" -->
 ##==##
 
-# And then 
+# Pipeline features
 
 * conditions
 * matrix
 * dependencies
+* os runner
+* [...]
 
 Notes: todo
 ##==##
@@ -91,8 +93,8 @@ Notes: todo
 
 ```yaml
 steps:
-  - name: Create file
-    run: echo "Hello Devfest Nantes" > cloud-nord.txt
+  - name: Create todo file
+    run: echo "Hello Devfest Nantes 2021" > do-not-procrastinate.txt
 ```
 
 Notes: Donc ici via la command `run`, on peut exécuter du shell ou des scripts shell : simple, basique... 
@@ -113,5 +115,5 @@ jobs:
           echo It runs in the container instead of the VM.
 ```
 
-Notes: Donc on peut également jouer une étape dans une container docker. Mais le plus intéressant.
+Notes: Donc on peut également jouer une étape dans un container docker. Mais le plus intéressant.
 

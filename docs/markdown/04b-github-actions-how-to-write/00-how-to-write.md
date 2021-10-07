@@ -1,12 +1,66 @@
 
+<!-- .slide: class="transition sfeir-bg-red" -->
+# How to write a Github action
+
+##==##
 # Two ways :
 
-* Typescript action (or Javascript)
 * Container action
+* Typescript action (or Javascript)
 * and now : Composite action !
 * Github provides templates on [github.com/actions](https://github.com/actions)
 
 Notes: 2 types de github action : javascript action ou une container action. Pour ces 2 types, il existe des templates pour ne pas partir de zéro que vous trouverez sur github.com/actions
+
+##==##
+
+# Container action
+
+* Based on a docker image + your shell script
+* Very easy to start with
+* Only compatible with Linux Host
+* A fewer longer to start
+* Interact with workflow by shell api
+
+Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
+
+##==##
+
+# Container action : example
+
+`Dockerfile`
+```Dockerfile
+FROM alpine:3.10
+
+COPY LICENSE README.md /
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+```
+
+`entrypoint.sh`
+```shell
+#!/bin/sh -l
+
+echo "hello $1"
+```
+
+`action.yml`
+```yaml
+name: 'Container Action Template'
+description: 'Get started with Container actions'
+author: 'GitHub'
+inputs: 
+  myInput:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.myInput }}
+```
 
 ##==##
 
@@ -32,30 +86,37 @@ Notes: core qui permets de travailler avec l'api de Github Actions, et github po
 
 ##==##
 
-# Container action
+# Composite action
 
-* Based on a docker image + your shell script
-* Very easy to start with
-* Only compatible with Linux Host
-* A fewer longer to start
-* Interact with workflow by shell api
+```yaml
+name: "Publish to Docker"
+inputs:
+  registry_username:
+    description: “Username for image registry”
+  registry_password:
+    description: “Password for image registry”
 
-Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
+runs:
+  using: "composite"
+  steps:
+      - uses: docker/setup-buildx-action@v1
 
-##==##
+      - uses: docker/login-action@v1
+        with:
+          username: ${{inputs.registry_username}}
+          password: ${{inputs.registry_password}}
 
-# Container action : example
+      - uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: user/app:latest
+```
 
-TODO 
+Use it 
 
 ##==##
 
 # Github-slug-action
 
-TODO 
-
-##==##
-
-# Composite action
-
-TODO 
+![marketplace](./assets/images/github-slug-action.png)

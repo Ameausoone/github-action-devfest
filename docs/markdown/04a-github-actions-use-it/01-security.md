@@ -1,5 +1,5 @@
 
-##==##
+
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Security
 
@@ -11,36 +11,63 @@ Notes: 36:26:40 Github action est donc très pratique, mais n'est pas exempt de 
 
 * What happens if an owner delete his action ?
 
+Notes: que se passe-t-il si le propriétaire supprime une action.
+##==##
+
+# Solution
+
 * A "archived" repo still works
 * Use organization projects
 * Fork it in your organization
 
-Notes: que se passe-t-il si le propriétaire supprime une action. ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
+Notes:  ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
 
 ##==##
 
 # The "event-stream" effect
 
-* What happens if an owner mine bitcoin with his action ?
+* What happens if an maintener mine bitcoin with his action ?
 
 Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets à jour son action pour miner du bitcoin sur vos runners, si vous utilisez la branche par défaut, ou une branche, ou même un tag. 
 
 ##==##
 
-# Use (long) commitid
+# Use (long) commitId
 
 ```yaml
 - uses: rlespinasse/github-slug-action@2f05f8b5cbdfb8b37e68426a162be978e4e82550
 ```
 
-
 Notes: Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le long. Dans ce cas, vous êtes sûr d'utiliser une version fixe de la github action.
+
+##==##
+
+# First-time contributors
+
+* Approve run pipeline for [first-time contributors](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)
+![marketplace](./assets/images/first-time-contributor.png)
+
+Notes: à l'inverse, quand vous maintenez un projet,  TODO
 
 ##==##
 
 # Use tag or branch
 
-Use branch TODO
+```yaml
+# use tag
+- uses: owner/repo@v2.1.3
+```
+
+```yaml
+# use branch
+- uses: owner/repo@v3.x
+```
+
+```yaml
+# use at your own risk 
+- uses: owner/repo
+# use default branch
+```
 
 ##==##
 
@@ -57,14 +84,6 @@ updates:
 ```
 
 Notes: Et vous pouvez même utiliser dependabot, pour maintenir vos github actions à jour !
-
-##==##
-
-# First time commiter
-
-TODO 
-
-Notes: TODO
 
 ##==##
 
@@ -102,27 +121,7 @@ le TOKEN a des droits read only.
 
 ##==##
 
-# GITHUB_TOKEN
-
-```yaml
-name: Pull request labeler
-on:
-- pull_request
-jobs:
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/labeler@v2
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-```
-
-Notes: pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée. Pour les PR de repos forké,
-le TOKEN a des droits read only.
-
-##==##
-
-# Use scope
+# Github token scope
 
 ```yaml
 name: "My workflow"
@@ -131,6 +130,8 @@ permissions: read-all
 jobs:
   [...]
 ```
+
+Notes: TODO
 
 ##==##
 
