@@ -5,6 +5,7 @@
 * With Inputs and Outputs
 * With documentation `README.md` !
 * Easily interact with Pipeline, git and Github API
+<!-- .element: class="list-fragment" -->
 
 Notes: C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
 
@@ -52,7 +53,7 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
 
 # Closer look to setup-*
 <!-- .slide: class="full-center" -->
-![call](./assets/images/setup-action.png)
+![call h-800](./assets/images/setup-action.png)
 
 Notes: C'est une convention dans les actions github, une action setup- va installer l'application directement sur le host, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
 
@@ -79,9 +80,10 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 
 ##==##
 
+<!-- .slide: class="full-center" -->
 # [Starter-workflows](https://github.com/actions/starter-workflows)
 
-![marketplace](./assets/images/starter-workflows.png)
+![marketplace h-800](./assets/images/starter-workflows.png)
 
 Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
 

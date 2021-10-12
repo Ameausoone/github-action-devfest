@@ -1,4 +1,4 @@
-<!-- .slide: data-background="./assets/images/template_diapo_png.png" class="transition" -->
+<!-- .slide: data-background="./assets/images/devfest-nantes-page.png" class="transition" -->
 # **Github Actions**
 
 ![Github Actions's Log](./assets/images/github-actions-logo.png) Enfin des pipelines accessibles aux développeurs

@@ -9,6 +9,7 @@
 * Typescript action (or Javascript)
 * and now : Composite action !
 * Github provides templates on [github.com/actions](https://github.com/actions)
+<!-- .element: class="list-fragment" -->
 
 Notes: 2 types de github action : javascript action ou une container action. Pour ces 2 types, il existe des templates pour ne pas partir de zéro que vous trouverez sur github.com/actions
 
@@ -113,10 +114,4 @@ runs:
           tags: user/app:latest
 ```
 
-Use it 
 
-##==##
-
-# Github-slug-action
-
-![marketplace](./assets/images/github-slug-action.png)
