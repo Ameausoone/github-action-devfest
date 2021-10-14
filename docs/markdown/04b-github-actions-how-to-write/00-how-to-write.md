@@ -4,10 +4,10 @@
 
 ##==##
 # Two ways :
-
+<br><br>
 * Container action
 * Typescript action (or Javascript)
-* and now : Composite action !
+* and now : new Composite action !
 * Github provides templates on [github.com/actions](https://github.com/actions)
 <!-- .element: class="list-fragment" -->
 
@@ -22,13 +22,14 @@ Notes: 2 types de github action : javascript action ou une container action. Pou
 * Only compatible with Linux Host
 * A fewer longer to start
 * Interact with workflow by shell api
+<!-- .element: class="list-fragment" -->
 
 Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
 
 ##==##
 
-# Container action : example
-
+# Container action : 1/3
+<!-- .slide: class="with-code" -->
 `Dockerfile`
 ```Dockerfile
 FROM alpine:3.10
@@ -39,6 +40,12 @@ COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 ```
+<!-- .element: class="big-code" -->
+
+##==##
+<!-- .slide: class="with-code" -->
+# Container action : 2/3
+
 
 `entrypoint.sh`
 ```shell
@@ -46,6 +53,12 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 echo "hello $1"
 ```
+<!-- .element: class="big-code" -->
+
+##==##
+<!-- .slide: class="with-code" -->
+# Container action : 3/3
+
 
 `action.yml`
 ```yaml
@@ -62,32 +75,34 @@ runs:
   args:
     - ${{ inputs.myInput }}
 ```
-
+<!-- .element: class="big-code" -->
 ##==##
 
 # (Type|Java)script action
-
+<br><br>
 * Run natively on host
 * Perfect for interact with API
 * Recommended choice
 * Faster than container action
 * Run on every runner
+<!-- .element: class="list-fragment" -->
 
 Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouvez l'écrire en javascript ou en typescript. C'est plutôt l'action privilégié par Github. Si vous avez besoin d'intéragir avec une API, c'est le choix idéal. ... Il y a d'ailleurs 2 librairies npm disponibles
 
 ##==##
 
-# Two (main) npm libraries
-
+# Main npm libraries
+<br><br>
 * @actions/core => interact with Github action workflow(inputs,env var, etc)
 * @actions/github => interact with Github API
 * @actions/exec => execute local process
+<!-- .element: class="list-fragment" -->
 
 Notes: core qui permets de travailler avec l'api de Github Actions, et github pour intéragir avec l'api Github. Mais évidemment, et c'est tout l'intérêt, vous pouvez importer n'importe quelle librairie npm.
 
 ##==##
 
-# Composite action
+# Composite action | Write it 
 
 ```yaml
 name: "Publish to Docker"
@@ -113,5 +128,22 @@ runs:
           push: true
           tags: user/app:latest
 ```
+##==##
 
+# Composite action | Use it 
 
+```yaml
+on: [push]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: my-org/publish-docker@v1
+        with:
+          registry_username: ${{secrets.REGISTRY_USERNAME}}
+          registry_password: ${{secrets.REGISTRY_PASSWORD}}
+```
+
+Notes:
