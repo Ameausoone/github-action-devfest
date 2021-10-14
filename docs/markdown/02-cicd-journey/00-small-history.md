@@ -20,7 +20,7 @@ Notes: D'abord on a eu Jenkins avec de l'intégration continue, et c'était déj
 * Rundeck
 * Docker Swarm
 * Ansible
-* ...
+* Today, 1500+ ![jenkins plugins h-100](./assets/images/jenkins-plugins.png)
 <!-- .element: class="list-fragment" -->
 
 Notes: OK là aussi c'est cool, ça nous facilite la vie, on a toutes les options de ansible dans un formulaire, c'est intégré. ...Mais maintenant on voudrait déployer sur la qa, mais seulement si je suis sur la branche master, et vérifier que sonar est ok et que mes tests passent, mais pour les tests d'intégration c'est seulement le nuit et je voudrais faire ça sur tous mes projets tant qu'à faire.
@@ -89,8 +89,7 @@ Notes: On va faire une librairie qui va contenir nos pipelines, et on les import
 # But we need isolation !
 
 <br><br>
-
-# mmmm Docker !
+![Docker h-400 center](./assets/images/docker-logo.png)
 
 Notes: on va faire tourner nos jobs dans des conteneurs docker, du coup, on a plus d'indépendances entre nos pipelines. On a des images docker avec tous ce qu'il nous faut. Alors tant qu'on utilise un seul outil à la fois, quand on commence à avoir besoin de gcloud avec terraform, avec vault avec curl, avec différentes versions, on commence à avoir une matrice d'image docker. ... Et à la fin, nos chères développeurs se retrouvent avec : 
 
