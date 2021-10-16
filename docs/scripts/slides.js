@@ -16,8 +16,11 @@ function github_actions_use_it() {
 }
 
 function github_actions_how_to_write() {
-  return ['04b-github-actions-how-to-write/00-how-to-write.md','04b-github-actions-how-to-write/01-github-slug-action.md']
-
+  return [
+    '04b-github-actions-how-to-write/00-how-to-write.md',
+    '04b-github-actions-how-to-write/01-github-slug-action.md',
+    '04b-github-actions-how-to-write/02-github-slug-action-impl.md'
+  ]
 }
 
 function finish(){

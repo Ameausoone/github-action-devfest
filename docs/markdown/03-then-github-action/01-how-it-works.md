@@ -80,7 +80,7 @@ Notes: Alors ici simplement, vous avez le mot clé `jobs`. Et ensuite, vous pouv
 ##==##
 
 # Pipeline features
-
+<br><br>
 * conditions
 * matrix
 * dependencies
@@ -93,6 +93,7 @@ Notes: todo
 ##==##
 <!-- .slide: class="with-code" -->
 # Shell
+<br>
 
 ```yaml
 steps:
@@ -106,6 +107,7 @@ Notes: Donc ici via la command `run`, on peut exécuter du shell ou des scripts 
 ##==##
 <!-- .slide: class="with-code" -->
 # Docker
+<br>
 
 ```yaml
 jobs:

@@ -7,9 +7,10 @@ Notes: 19:33:20
 ##==##
 <!-- .slide: class="with-code" -->
 # Use a Github Action
+<br>
+
 ```yaml
 steps:
-
   - name: Checkout code
     uses: actions/checkout@v2
 

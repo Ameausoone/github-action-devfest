@@ -1,6 +1,6 @@
 
 # What is a Github Action ?
-
+<br><br>
 * Unit action
 * With Inputs and Outputs
 * With documentation `README.md` !
@@ -26,28 +26,35 @@ Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
 ##==##
 
 # "Builtin" actions
-<br><br>
-Github provides a lot of actions
+<br>
+
+## Github provides a lot of actions
+
+<br>
+
 - [actions/checkout](https://github.com/actions/checkout) - Setup your repository on your workflow.
 - [actions/cache](https://github.com/actions/cache) - Cache dependencies and build outputs in GitHub Actions.
 - [github/super-linter](https://github.com/github/super-linter) - Linter for a lot of languages
 - [github/codeql-action](https://github.com/github/codeql-action) - Run Codeql
 - [...]
+<!-- .element: class="list-fragment" -->
 
 Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour installer vos dépendances, pour java, node, python etc. Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
 
 ##==##
 # "Setup" Actions
 
-- [actions/setup-node: Node.js](https://github.com/actions/setup-node)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[python](https://github.com/actions/setup-python)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[go](https://github.com/actions/setup-go)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[dotnet](https://github.com/actions/setup-dotnet)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[haskell](https://github.com/actions/setup-haskell)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[java](https://github.com/actions/setup-java)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[ruby](https://github.com/actions/setup-ruby)
-- &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[elixir](https://github.com/actions/setup-elixir)
+- [actions/](https://github.com/actions/)
+  - [node](https://github.com/actions/setup-node)
+  - [python](https://github.com/actions/setup-python)
+  - [go](https://github.com/actions/setup-go)
+  - [dotnet](https://github.com/actions/setup-dotnet)
+  - [haskell](https://github.com/actions/setup-haskell)
+  - [java](https://github.com/actions/setup-java)
+  - [ruby](https://github.com/actions/setup-ruby)
+  - [elixir](https://github.com/actions/setup-elixir)
 - [fabasoad/setup-cobol-action: Cobol 😅](https://github.com/fabasoad/setup-cobol-action)
+<!-- .element: class="list-fragment" -->
 
 ##==##
 
@@ -59,34 +66,28 @@ Notes: C'est une convention dans les actions github, une action setup- va instal
 
 ##==##
 
-# Or more High level
-<br><br>
-
-- [actions/upload-artifact](https://github.com/actions/upload-artifact) - Upload artifacts from your workflow.
-- [actions/cache](https://github.com/actions/cache) - Manage cache.
-- [actions/github-script](https://github.com/actions/github-script) - Write a script for GitHub API and the workflow contexts.
-
-Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. Un petit focus sur github-script.
-
-##==##
-
 # Github Automation
-<br><br>
 
 - [actions/](https://github.com/actions/)
+  - [upload-artifact](https://github.com/actions/upload-artifact) - _Upload artifacts from your workflow._
+  - [cache](https://github.com/actions/cache) - _Manage cache._
+  - [github-script](https://github.com/actions/github-script) - _Write a script for GitHub API and the workflow contexts._
   - [create-release](https://github.com/actions/create-release) - _An Action to create releases via the GitHub Release API_.
-  -  [aupload-release-asset](https://github.com/actions/upload-release-asset) - _An Action to upload a release asset via the GitHub Release API_.
+  - [upload-release-asset](https://github.com/actions/upload-release-asset) - _An Action to upload a release asset via the GitHub Release API_.
   - [first-interaction](https://github.com/actions/first-interaction) - _An action for filtering pull requests and issues from first-time contributors_.
   - [stale](https://github.com/actions/stale) - _Marks issues and pull requests that have not had recent interaction_.
   - [labeler](https://github.com/actions/labeler) - _An action for automatically labelling pull requests_.
   - [delete-package-versions](https://github.com/actions/delete-package-versions) - _Delete versions of a package from GitHub Packages_.
+<!-- .element: class="list-fragment" -->
+
+Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. Un petit focus sur github-script.
 
 ##==##
 
 <!-- .slide: class="full-center" -->
 # [Starter-workflows](https://github.com/actions/starter-workflows)
 
-![marketplace h-800 center](./assets/images/starter-workflows.png)
+![marketplace h-700 center](./assets/images/starter-workflows.png)
 
 Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
 
@@ -114,6 +115,7 @@ Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une f
 - [google-github-actions](https://github.com/google-github-actions) - _GCP_ 
 - [Azure/actions](https://github.com/Azure/actions) - _Azure_
 - [aws-actions](https://github.com/aws-actions) - _AWS_
+<!-- .element: class="list-fragment" -->
 
 Notes: 
 
@@ -134,5 +136,6 @@ Notes: Un point d'entrée pour découvrir des github actions communautaire.
 * Github Action are way more lightweight
 * It is not attached to an instance
 * You can develop it in any language
+<!-- .element: class="list-fragment" -->
 
 Notes: TODO

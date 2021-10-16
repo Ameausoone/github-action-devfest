@@ -8,8 +8,9 @@ Notes: 36:26:40 Github action est donc très pratique, mais n'est pas exempt de 
 ##==##
 
 # The "left-pad" effect
+<br><br>
 
-* What happens if an owner delete his action ?
+# What happens if an owner delete his action ?
 
 Notes: que se passe-t-il si le propriétaire supprime une action.
 ##==##
@@ -27,7 +28,8 @@ Notes:  ça ne fonctionne plus, si l'action est critique pour vous est qu'elle p
 
 # The "event-stream" effect
 <br><br>
-* What happens if an maintener mine ![bitcoin h-50](./assets/images/bitcoin-logo.png) with his action ?
+
+# What happens if an maintener mine ![bitcoin h-100](./assets/images/bitcoin-logo.png) with his action ?
 
 Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets à jour son action pour miner du bitcoin sur vos runners, si vous utilisez la branche par défaut, ou une branche, ou même un tag. 
 
@@ -108,6 +110,7 @@ Notes: Par défaut, quand l'action checkout fait un clone de votre repo, la conf
 ##==##
 <!-- .slide: class="with-code" -->
 # GITHUB_TOKEN
+<br>
 
 ```yaml
 [...]
@@ -124,11 +127,12 @@ jobs:
 Notes: pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée. Pour les PR de repos forké,
 le TOKEN a des droits read only.
 
-
 ##==##
 
 # Github token scope
 <!-- .slide: class="with-code" -->
+<br><br>
+
 ```yaml
 on: [ push ]
 permissions: read-all
@@ -145,6 +149,7 @@ Notes: TODO
 
 ## Set secrets in your repo settings and inject them in your pipeline.
 <br><br>
+
 ```yaml
 steps:
   - name: Hello world action
@@ -159,12 +164,11 @@ Notes: Il y a une gestion des secrets, le principe est assez simple vous spécif
 
 ##==##
 
-# Use workload federation identity
+# Use Workload Federation Identity
 
 ```yaml
 jobs:
   job_id:
-    # Add "id-token" with the intended permissions.
     permissions:
       contents: 'read'
       id-token: 'write'
@@ -182,3 +186,5 @@ jobs:
         curl https://secretmanager.googleapis.com/v1/projects/my-project/secrets/my-secret/versions/1:access \
           --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
 ```
+
+Notes:TODO
