@@ -146,7 +146,4 @@ jobs:
 ```
 <!-- .element: class="big-code" -->
 
-
 Notes:
-
-##==##

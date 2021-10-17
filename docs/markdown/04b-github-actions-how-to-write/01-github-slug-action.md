@@ -1,5 +1,4 @@
 
-
 # Github-slug-action
 
 ![marketplace h-800 center](./assets/images/github-slug-action.png)
@@ -11,7 +10,6 @@ Notes:
 # How it started ? 
 
 ![start h-600 center](./assets/images/twitter-start.png)
-
 
 Notes:
 
