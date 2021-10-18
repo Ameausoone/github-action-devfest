@@ -1,3 +1,7 @@
 .reveal .slides section {
-    // Do some stuff
+  // Do some stuff
+
+  &.with-code.max-height pre code {
+    max-height: 800px;
+  }
 }
