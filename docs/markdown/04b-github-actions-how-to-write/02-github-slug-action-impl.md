@@ -1,6 +1,9 @@
+<!-- .slide: class="with-code max-height" -->
+
 # Slug-action | 1st Implementation
 
-# Container action
+## Container action
+
 ```shell
 #!/bin/sh -l
 slug_ref() {
@@ -20,9 +23,10 @@ short_sha() {
   echo "GITHUB_SHA_SHORT=$(short_sha "$GITHUB_SHA")"
 } >>"$GITHUB_ENV"
 ```
+
 Notes:
 
-##==## 
+##==##
 
 # Slug-action | Issue
 
@@ -30,7 +34,7 @@ Notes:
 
 ##==##
 
-# Slug-action | PR 
+# Slug-action | PR
 
 ![pr h-400 center](./assets/images/issue-os-pr.png)
 
@@ -47,7 +51,9 @@ Notes:
 ![search h-600 center](./assets/images/github-code-search.png)
 
 ##==##
+
 <!-- .slide: class="transition sfeir-bg-red" -->
+
 # Action | 3 advises to write an action
 
 Notes:
@@ -58,14 +64,14 @@ Notes:
 
 # a simple use case
 
-Notes: 
+Notes:
 
 ##==##
 
 # Advise | Semantic
 
-* Use semantic versioning
-* Use semantic branching
+- Use semantic versioning
+- Use semantic branching
 
 ![default h-100 center](./assets/images/github-default-branch.png)
 ![stale h-150 center](./assets/images/github-stale-branches.png)
@@ -75,4 +81,3 @@ Notes:
 # Documentation
 
 ![rtfm h-500 center](./assets/images/RTFM.png)
-
