@@ -50,6 +50,8 @@ Notes:
 
 ![search h-600 center](./assets/images/github-code-search.png)
 
+Notes: 43:14:24
+
 ##==##
 
 <!-- .slide: class="transition sfeir-bg-red" -->

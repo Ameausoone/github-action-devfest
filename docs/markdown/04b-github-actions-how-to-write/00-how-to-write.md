@@ -22,12 +22,13 @@ Notes: 2 types de github action : javascript action ou une container action. Pou
 
 - Based on a docker image + your shell script
 - Very easy to start with
-<!--* Only compatible with Linux Host
-- A fewer longer to start -->
 - Interact with workflow by shell api
 <!-- .element: class="list-fragment" -->
 
-Notes: il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
+<!-- * Only compatible with Linux Host
+- A fewer longer to start -->
+
+Notes: 33:50:24 il existe également un template pour faire une action basée sur un container, attention compatible actuellement que avec les runners Linux, c'est également un peu plus long à démarrer qu'une action Javascript. 2 exemples de Github action
 
 ##==##
 
@@ -97,9 +98,10 @@ runs:
 - Run natively on host
 - Perfect for interact with API
 - Recommended choice
+<!-- .element: class="list-fragment" -->
+
 <!-- * Faster than container action
 - Run on every runner -->
-<!-- .element: class="list-fragment" -->
 
 Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouvez l'écrire en javascript ou en typescript. C'est plutôt l'action privilégié par Github. Si vous avez besoin d'intéragir avec une API, c'est le choix idéal. ... Il y a d'ailleurs 2 librairies npm disponibles
 
@@ -168,4 +170,4 @@ jobs:
 
 <!-- .element: class="big-code" -->
 
-Notes:
+Notes: 36:58:24

@@ -13,7 +13,7 @@
 - Then each step, run by default on VM or in docker image
 <!-- .element: class="list-fragment" -->
 
-Notes: un pipeline démarre avec une VM fraiche à chaque pipeline, ensuite chaque step peut s'exécuter dans la VM ou dans une image docker. C'est un concept nouveau, couteux. Il est possible d'avoir des runners on premise, mais difficile à gérer. Mais qui a ses avantages.
+Notes: 8:46:24 un pipeline démarre avec une VM fraiche à chaque pipeline, ensuite chaque step peut s'exécuter dans la VM ou dans une image docker. C'est un concept nouveau, couteux. Il est possible d'avoir des runners on premise, mais difficile à gérer. Mais qui a ses avantages.
 
 ##==##
 
@@ -21,7 +21,7 @@ Notes: un pipeline démarre avec une VM fraiche à chaque pipeline, ensuite chaq
 
 `.github/workflows/pipeline-1.yaml`
 
-Notes: Au lieu d'avoir un fichier à la racine du projet, on le déplace dans un répertoire, et on peut avoir x pipelines, un par fichier. C'est tout bête, mais ça permets d'écrire différents pipelines facilement, au lieu de tout avoir dans un seul fichier, à coup de conditions.
+Notes: Au lieu d'avoir un fichier à la racine du projet, on le déplace dans un répertoire, et on peut avoir x pipelines, un par fichier. C'est tout simple, mais ça permets d'écrire différents pipelines facilement, au lieu de tout avoir dans un seul fichier, à coup de conditions.
 
 ##==##
 
@@ -37,7 +37,7 @@ on: [push, pull_request]
 
 <!-- .element: class="big-code" -->
 
-Notes: Généralement l'event qui va déclencher un pipeline, ce sera le commit, puis on va mettre des conditions. Ici c'est différent, on va déclencher un pipeline sur un événement. Ici on a un exemple simple, mais..
+Notes: Généralement l'event qui va déclencher un pipeline, ce sera le commit, puis on va mettre des conditions. Ici c'est différent, et c'est un gros point fort de Github actions, on va déclencher un pipeline sur un événement. Ici on a un exemple simple, ➡️ mais..
 
 ##==##
 
@@ -58,7 +58,7 @@ on:
 
 <!-- .element: class="big-code" -->
 
-Notes: Mais pas uniquement, ici on va déclencher notre pipeline uniquement si on pousse sur la branche master, ou sur une pullrequest dont la branche contient "feat/". Ou quand un commentaire est ajouté sur une issue, ou dernier exemple sur un type d'activité précis d'un événement : la création d'une release. Je ne vais pas énumérer tous les events disponibles. Mais c'est qquechose que j'ai trouvé très intéressant. Comme par exemple, créer un pipeline de rebase.
+Notes: Mais pas uniquement, ici par exempe on va déclencher un pipeline quand un commentaire est ajouté sur une issue, ou dernier exemple sur un type d'activité précis d'un événement : la création d'une release. Je ne vais pas énumérer tous les events disponibles. Mais c'est qquechose que j'ai trouvé très intéressant. Comme par exemple, créer un pipeline de rebase.
 
 ##==##
 
@@ -83,7 +83,7 @@ jobs:
     - run: npm test
 ```
 
-Notes: Alors ici simplement, vous avez le mot clé `jobs`. Et ensuite, vous pouvez indiquer un ou plusieurs pipelines, ici on a un simple pipeline. Il y a beaucoup d'options disponibles à chaque étape. Quelques exemples : ...
+Notes: Alors ici simplement, vous avez le mot clé `jobs`. Et ensuite, vous pouvez indiquer un ou plusieurs pipelines, ici on a un simple pipeline. Il y a beaucoup d'options disponibles à chaque étape. ➡️ Quelques exemples : ...
 
 ##==##
 
@@ -98,7 +98,7 @@ Notes: Alors ici simplement, vous avez le mot clé `jobs`. Et ensuite, vous pouv
 - [...]
 <!-- .element: class="list-fragment" -->
 
-Notes: todo
+Notes: 11:54:24 Donc on a des features classiques mais toujours pratiques. On peut mettre des conditions, une matrice d'option comme une version de nodejs, si on a plusieurs pipelines, on peut indiquer une dépendance entre les pipelines. 
 
 ##==##
 

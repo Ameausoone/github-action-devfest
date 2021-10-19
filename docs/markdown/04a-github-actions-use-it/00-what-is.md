@@ -7,7 +7,7 @@
 * Easily interact with Pipeline, git and Github API
 <!-- .element: class="list-fragment" -->
 
-Notes: C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
+Notes: 15:02:24 C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
 
 ##==##
 
@@ -62,7 +62,7 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
 <!-- .slide: class="full-center" -->
 ![call h-800](./assets/images/setup-action.png)
 
-Notes: C'est une convention dans les actions github, une action setup- va installer l'application directement sur le host, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
+Notes: 18:10:24 C'est une convention dans les actions github, une action setup- va installer l'application directement sur le host, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
 
 ##==##
 
@@ -117,7 +117,7 @@ Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une f
 - [aws-actions](https://github.com/aws-actions) - _AWS_
 <!-- .element: class="list-fragment" -->
 
-Notes: 
+Notes: 21:18:24
 
 ##==##
 

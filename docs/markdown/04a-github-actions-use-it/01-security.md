@@ -22,8 +22,9 @@ Notes: que se passe-t-il si le propriétaire supprime une action.
 - Use organization projects
 - Fork it in your organization
 - A "archived" repo still works
-  <!-- .element: class="list-fragment" -->
-  Notes: ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
+<!-- .element: class="list-fragment" -->
+
+Notes: 24:26:24ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
 
 ##==##
 
@@ -108,7 +109,7 @@ updates:
 
 <!-- .element: class="big-code" -->
 
-Notes: Et vous pouvez même utiliser dependabot, pour maintenir vos github actions à jour !
+Notes: 27:34:24 Et vous pouvez même utiliser dependabot, pour maintenir vos github actions à jour !
 
 ##==##
 
@@ -219,4 +220,4 @@ jobs:
             --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
 ```
 
-Notes:TODO
+Notes: 30:42:24
