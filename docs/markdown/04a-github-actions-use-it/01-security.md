@@ -13,6 +13,7 @@ Notes: 36:26:40 Github action est donc très pratique, mais n'est pas exempt de 
 # What happens if an owner delete his action ?
 
 Notes: que se passe-t-il si le propriétaire supprime une action.
+
 ##==##
 
 # The "left-pad" effect | Solution
@@ -24,7 +25,7 @@ Notes: que se passe-t-il si le propriétaire supprime une action.
 - A "archived" repo still works
 <!-- .element: class="list-fragment" -->
 
-Notes: 24:26:24ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
+Notes: 24:26:24 ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
 
 ##==##
 
@@ -60,7 +61,7 @@ Notes: Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le 
 
 ![marketplace](./assets/images/first-time-contributor.png)
 
-Notes: à l'inverse, quand vous maintenez un projet, TODO
+Notes: à l'inverse, quand vous maintenez un projet, Désormais, vous devez valider manuellement l'exécution d'un pipeline lorsqu'un contributeur vous propose une PR sur un workflow pour la 1ère fois. 
 
 ##==##
 
@@ -69,24 +70,30 @@ Notes: à l'inverse, quand vous maintenez un projet, TODO
 # Use tag or branch
 
 ```yaml
-# use tag
-- uses: owner/repo@v2.1.3
-```
-
-<!-- .element: class="big-code" -->
-
-```yaml
-# use branch
+# safe
 - uses: owner/repo@v3.x
 ```
 
-<!-- .element: class="big-code" -->
+```yaml
+# safer
+- uses: owner/repo@v2.1.3
+```
 
 ```yaml
-# use at your own risk
+# ultra safe
+- uses: owner/repo@v2f05f8b5cbdfb8b37e68426a162be978e4e82550
+```
+
+```yaml
+# not safe at all
 - uses: owner/repo
 # use default branch
 ```
+
+<!-- .element: class="big-code" -->
+
+
+Notes: voilà je résume ici les différentes possibilités pour appeler une github action, via une branche, un tag, un commitId, ou sur la branche par défaut.
 
 <!-- .element: class="big-code" -->
 
@@ -168,7 +175,7 @@ jobs: [...]
 
 <!-- .element: class="big-code" -->
 
-Notes: TODO
+Notes: Depuis qques mois, vous pouvez affiner les droits accorder au github token, vous avez 2 permissions basiques read-all et write-all, mais vous pouvez même aller plus loin dans les permissions. 
 
 ##==##
 
@@ -191,7 +198,7 @@ steps:
 
 <!-- .element: class="big-code" -->
 
-Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs.
+Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs. ➡️ Alors question : qui a déjà enregistré un token sur son poste ou sur un outil de CI pour accéder à une API ? Qui les renouvelle régulièrement ? 
 
 ##==##
 
@@ -220,4 +227,4 @@ jobs:
             --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
 ```
 
-Notes: 30:42:24
+Notes: 30:42:24 Alors ici une solution encore mal connue mais très intéressante. Cette Github Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.

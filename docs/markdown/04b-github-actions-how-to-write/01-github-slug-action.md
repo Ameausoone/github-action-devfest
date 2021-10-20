@@ -2,7 +2,7 @@
 
 ![marketplace h-800 center](./assets/images/github-slug-action.png)
 
-Notes:
+Notes: Je voulais faire un petit focus sur une Github action que je maintiens avec mon collègue Romain Lespinasse.
 
 ##==##
 
@@ -10,7 +10,7 @@ Notes:
 
 ![start h-600 center](./assets/images/twitter-start.png)
 
-Notes:
+Notes: Alors comment ça a commencé ? En fait par un tweet, où j'utilisais Github action, et il me manquait une variable d'environnement bien pratique sur Gitlab CI. 
 
 ##==##
 
@@ -18,7 +18,7 @@ Notes:
 
 ![try h-500 center](./assets/images/twitter-try.png)
 
-Notes:
+Notes: Et du coup, Romain a boostrap une Github Action
 
 ##==##
 
@@ -29,6 +29,8 @@ Notes:
 ## [How to get current branch within github actions ?](https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions/58730805#58730805)
 
 ![marketplace h-500 center](./assets/images/stackoverflow-github-actions.png)
+
+Notes: ça réponds à cette question : comment extraire des variables d'environnement fourni par github, une variable que l'on puisse utiliser facilement dans un pipeline.
 
 ##==##
 
@@ -51,4 +53,4 @@ Notes:
     echo "   base ref            : ${{ env.GITHUB_BASE_REF_SLUG }}"              # main
 ```
 
-Notes: 40:06:24
+Notes: 40:06:24 Vous avez juste à rajouter 2 lignes, et vous allez retrouver toutes ces variables que vous pouvez consommer facilement. vous l'aurez deviné, on est pas sur un projet de Machine Learning, en gros on fait du sed sur des variables d'environnements. C'est basique, mais l'intérêt n'est pas forcèment sur ce que fait cette github action mais plutôt comment elle le fait. 

@@ -53,16 +53,17 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
   - [java](https://github.com/actions/setup-java)
   - [ruby](https://github.com/actions/setup-ruby)
   - [elixir](https://github.com/actions/setup-elixir)
-- [fabasoad/setup-cobol-action: Cobol 😅](https://github.com/fabasoad/setup-cobol-action)
+fabasoad/setup-cobol-action)
 <!-- .element: class="list-fragment" -->
 
+Notes: vous avez la liste des sdk disponible dans vos github actions fourni par Github actions. 
 ##==##
 
 # Closer look to setup-*
 <!-- .slide: class="full-center" -->
 ![call h-800](./assets/images/setup-action.png)
 
-Notes: 18:10:24 C'est une convention dans les actions github, une action setup- va installer l'application directement sur le host, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
+Notes: 18:10:24 C'est une convention dans les actions github, une action setup- va installer l'application directement sur le runner, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
 
 ##==##
 
@@ -80,7 +81,7 @@ Notes: 18:10:24 C'est une convention dans les actions github, une action setup- 
   - [delete-package-versions](https://github.com/actions/delete-package-versions) - _Delete versions of a package from GitHub Packages_.
 <!-- .element: class="list-fragment" -->
 
-Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. Un petit focus sur github-script.
+Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. ➡️ Et pour vous faciliter la tâche, il y a également des 
 
 ##==##
 
@@ -105,7 +106,7 @@ Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant,
 
 ![marketplace h-700 center](./assets/images/marketplace.png)
 
-Notes: Vous pouvez ensuite exposer votre Github Action sur la marketplace, une fois votre action créé, vous pouvez la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
+Notes: On peut trouver les Github Action sur la marketplace, une fois l'action créé, on peut  la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
 
 ##==##
 
@@ -127,7 +128,7 @@ Notes: 21:18:24
 
 ![marketplace h-700 center](./assets/images/awesome-actions.png)
 
-Notes: Un point d'entrée pour découvrir des github actions communautaire.
+Notes: Un petit focus sur awesome-actions, c'est un projet qui a commencé très tôt sur les Github actions. Qui liste des github actions intéressante. Je trouve que c'est un bon point d'entrée pour découvrir des github actions communautaires. ➡️ Oui mais vous allez me dire, oui mais Antoine, les plugins c'est pas nouveau. 
 
 ##==##
 
@@ -138,4 +139,5 @@ Notes: Un point d'entrée pour découvrir des github actions communautaire.
 * You can develop it in any language
 <!-- .element: class="list-fragment" -->
 
-Notes: TODO
+Notes: Les Github Actions sont plus simples à écrire. Une github action n'est pas "attaché" 
+à une instance, chaque pipeline peut utiliser différentes github actions dans différentes versions indépendamment les uns des autres. D'ailleurs ce que je trouverais intéressant, ce serait la possibilité d'utiliser des github actions dans Jenkins. 
