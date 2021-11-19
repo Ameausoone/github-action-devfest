@@ -19,7 +19,11 @@ Notes: 8:46:24 un pipeline démarre avec une VM fraiche à chaque pipeline, ensu
 
 # Directory
 
-`.github/workflows/pipeline-1.yaml`
+- `.github/workflows/pipeline-1.yaml`
+- `.github/workflows/pipeline-2.yaml`
+- `...`
+- `.github/workflows/pipeline-X.yaml`
+<!-- .element: class="list-fragment" -->
 
 Notes: Au lieu d'avoir un fichier à la racine du projet, on le déplace dans un répertoire, et on peut avoir x pipelines, un par fichier. C'est tout simple, mais ça permets d'écrire différents pipelines facilement, au lieu de tout avoir dans un seul fichier, à coup de conditions.
 
@@ -111,7 +115,7 @@ Notes: 11:54:24 Donc on a des features classiques mais toujours pratiques. On pe
 ```yaml
 steps:
   - name: Create todo file
-    run: echo "Hello Devfest Nantes 2021" > do-it.txt
+    run: echo "Hello Devfest Lille 2021" > do-it.txt
 ```
 
 <!-- .element: class="big-code" -->

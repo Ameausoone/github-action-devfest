@@ -1,6 +1,6 @@
 <!-- .slide: class="speaker-slide" -->
 
-# Hello Devfest Nantes 2021
+# Hello Devfest Lille 2021
 
 ![speaker](./assets/images/ameausoone.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)

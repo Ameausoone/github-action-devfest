@@ -62,6 +62,12 @@ Notes: Alors on a souvent ajouté du shell, pour parser du texte, extraire un co
 
 ##==##
 
+# Shell !!
+
+![Putin h-800 center](./assets/images/putin-language-us-presidents.jpeg)
+
+##==##
+
 # And... Pipeline As Code
 
 - `Jenkinsfile`
@@ -98,7 +104,7 @@ Notes: On va faire une librairie qui va contenir nos pipelines, et on les import
 <br><br>
 ![Docker h-400 center](./assets/images/docker-logo.png)
 
-Notes: 5:38:24 on va faire tourner nos jobs dans des conteneurs docker, du coup, on a plus d'indépendances entre nos pipelines. On a des images docker avec tous ce qu'il nous faut. Alors tant qu'on utilise un seul outil à la fois, quand on commence à avoir besoin de gcloud avec terraform, avec vault avec curl, avec différentes versions, on commence à avoir une matrice d'image docker. ➡️ Et à la fin, nos chères développeurs se retrouvent avec :
+Notes: 5:38:24 on va faire tourner nos jobs dans des conteneurs docker, du coup, on a plus d'indépendances entre nos pipelines. On a des images docker avec tous ce qu'il nous faut. Alors tant qu'on utilise un seul outil à la fois, quand on commence à avoir besoin de gcloud avec terraform, avec vault avec curl, avec différentes versions, on commence à avoir une matrice d'image docker. ➡️ Et à la fin, nos chers développeurs se retrouvent avec :
 
 ##==##
 
@@ -106,12 +112,12 @@ Notes: 5:38:24 on va faire tourner nos jobs dans des conteneurs docker, du coup,
 
 # And finally developers get this ...
 
-`.gitlab-ci.yaml`
+`pipeline.yaml`
 
 ```yaml
 include:
   - project: 'shared-libraries'
-    ref: master
+    ref: main
     # Try to touch this !
     file: 'complexe-pipeline-used-by-a-lot-of-projects.yml'
 ```
