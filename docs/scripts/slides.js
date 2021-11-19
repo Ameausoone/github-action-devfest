@@ -12,7 +12,7 @@ function then_github_action() {
 }
 
 function github_actions_use_it() {
-  return ['04a-github-actions-use-it/00-what-is.md', '04a-github-actions-use-it/01-security.md']
+  return ['04a-github-actions-use-it/00-what-is.md','04a-github-actions-use-it/01-demo.md','04a-github-actions-use-it/01-demo-b.md', '04a-github-actions-use-it/02-security.md']
 }
 
 function github_actions_how_to_write() {

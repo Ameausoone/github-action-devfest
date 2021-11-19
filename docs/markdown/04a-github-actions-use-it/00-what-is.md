@@ -32,10 +32,10 @@ Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
 
 <br>
 
-- [actions/checkout](https://github.com/actions/checkout) - Setup your repository on your workflow.
-- [actions/cache](https://github.com/actions/cache) - Cache dependencies and build outputs in GitHub Actions.
-- [github/super-linter](https://github.com/github/super-linter) - Linter for a lot of languages
-- [github/codeql-action](https://github.com/github/codeql-action) - Run Codeql
+- [actions/checkout](https://github.com/actions/checkout) - _Setup your repository on your workflow._
+- [actions/cache](https://github.com/actions/cache) - _Cache dependencies and build outputs in GitHub Actions._
+- [github/super-linter](https://github.com/github/super-linter) - _Linter for a lot of languages_
+- [github/codeql-action](https://github.com/github/codeql-action) - _Run Codeql_
 - [...]
 <!-- .element: class="list-fragment" -->
 
@@ -53,7 +53,6 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
   - [java](https://github.com/actions/setup-java)
   - [ruby](https://github.com/actions/setup-ruby)
   - [elixir](https://github.com/actions/setup-elixir)
-fabasoad/setup-cobol-action)
 <!-- .element: class="list-fragment" -->
 
 Notes: vous avez la liste des sdk disponible dans vos github actions fourni par Github actions. 
@@ -128,16 +127,4 @@ Notes: 21:18:24
 
 ![marketplace h-700 center](./assets/images/awesome-actions.png)
 
-Notes: Un petit focus sur awesome-actions, c'est un projet qui a commencé très tôt sur les Github actions. Qui liste des github actions intéressante. Je trouve que c'est un bon point d'entrée pour découvrir des github actions communautaires. ➡️ Oui mais vous allez me dire, oui mais Antoine, les plugins c'est pas nouveau. 
-
-##==##
-
-# But Jenkins has plugins
-<br><br>
-* Github Action are way more lightweight
-* It is not attached to an instance
-* You can develop it in any language
-<!-- .element: class="list-fragment" -->
-
-Notes: Les Github Actions sont plus simples à écrire. Une github action n'est pas "attaché" 
-à une instance, chaque pipeline peut utiliser différentes github actions dans différentes versions indépendamment les uns des autres. D'ailleurs ce que je trouverais intéressant, ce serait la possibilité d'utiliser des github actions dans Jenkins. 
+Notes: Un petit focus sur awesome-actions, c'est un projet qui a commencé très tôt sur les Github actions. Qui liste des github actions intéressante. Je trouve que c'est un bon point d'entrée pour découvrir des github actions communautaires. ➡️ Oui là c'est le moment de vous faire une petite démo

@@ -17,6 +17,7 @@ Notes: 8:53:20 et là dessus arrive Github Actions.
 - Github Action goes YAML \o/
 - General availability end-2019
 - Environments, Custom Github Runner, etc
+- [Github Roadmap](https://github.com/github/roadmap/projects/1)
 <!-- .element: class="list-fragment" -->
 
 Notes: un rapide historique de Github Actions .
