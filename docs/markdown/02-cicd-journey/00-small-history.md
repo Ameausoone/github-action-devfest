@@ -23,7 +23,7 @@ Notes: 2:30:24 D'abord on a eu Jenkins avec de l'intégration continue, et c'ét
 - Rundeck
 - Docker Swarm
 - Ansible
-- Today, 1500+ ![jenkins plugins h-100](./assets/images/jenkins-plugins.png)
+- Today, 1800+ ![jenkins plugins h-100](./assets/images/jenkins-plugins.png)
 <!-- .element: class="list-fragment" -->
 
 Notes: OK là aussi c'est cool, ça nous facilite la vie, on a toutes les options de ansible dans un formulaire, c'est intégré. ...Mais maintenant on voudrait déployer sur la qa, mais seulement si je suis sur la branche master, et vérifier que sonar est ok et que mes tests passent, mais pour les tests d'intégration c'est seulement le nuit et je voudrais faire ça sur tous mes projets tant qu'à faire.

@@ -1,9 +1,1 @@
-{
-	"version": 3,
-	"file": "slides.css",
-	"sources": [
-		"../scss/slides.scss"
-	],
-	"names": [],
-	"mappings": "AAAA,AAGE,OAHK,CAAC,OAAO,CAAC,OAAO,AAGpB,UAAU,AAAA,WAAW,CAAC,GAAG,CAAC,IAAI,CAAC;EAC9B,UAAU,EAAE,KAAK,GAClB"
-}
+{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"slides.css"}

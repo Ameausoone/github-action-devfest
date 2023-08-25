@@ -1,3 +1,5 @@
+import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
+
 // One method per module
 function intro() {
   return ['01-Intro/00-title.md', '01-Intro/01-speaker-ame.md','01-Intro/02-experience.md'];
@@ -41,6 +43,4 @@ function formation() {
   });
 }
 
-export function usedSlides() {
-  return formation();
-}
+SfeirThemeInitializer.init(formation);

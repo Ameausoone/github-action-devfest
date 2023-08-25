@@ -4,7 +4,7 @@
 
 ##==##
 
-# 3 ways :
+# 3 ways
 
 <br><br>
 
@@ -32,7 +32,7 @@ Notes: 33:50:24 il existe également un template pour faire une action basée su
 
 ##==##
 
-# Container action : 1/3
+# Container action(1/3)
 
 <!-- .slide: class="with-code" -->
 
@@ -49,13 +49,14 @@ ENTRYPOINT ["/entrypoint.sh"]
 ```
 
 <!-- .element: class="big-code" -->
-Notes : Un fichier dockerfile
+
+Notes: Un fichier dockerfile
 
 ##==##
 
 <!-- .slide: class="with-code" -->
 
-# Container action : 2/3
+# Container action(2/3)
 
 `entrypoint.sh`
 
@@ -73,7 +74,7 @@ Notes: un entrypoint
 
 <!-- .slide: class="with-code max-height" -->
 
-# Container action : 3/3
+# Container action(3/3)
 
 `action.yml`
 
