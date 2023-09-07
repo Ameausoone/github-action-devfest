@@ -41,7 +41,7 @@ Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets �
 
 <!-- .slide: class="with-code" -->
 
-# Use (long) commitId
+# Use commitId
 
 ```yaml
 - uses: owner/actions@2f05f8b5cbdfb8b37e68426a162be978e4e82550
@@ -125,7 +125,7 @@ Notes: 27:34:24 Et vous pouvez même utiliser dependabot, pour maintenir vos git
 # Checkout
 
 ```yaml
-- uses: actions/checkout@v2
+- uses: actions/checkout@v4
   with:
     # default : true
     persist-credentials: false
@@ -169,8 +169,16 @@ le TOKEN a des droits read only.
 
 ```yaml
 on: [push]
-permissions: read-all
-jobs: [...]
+permissions:
+  actions: read|write|none
+  checks: read|write|none
+  contents: read|write|none
+  id-token: read|write|none
+  issues: read|write|none
+  packages: read|write|none
+  pages: read|write|none
+  pull-requests: read|write|none
+  statuses: read|write|none
 ```
 
 <!-- .element: class="big-code" -->
@@ -209,22 +217,23 @@ Notes: Il y a une gestion des secrets, le principe est assez simple vous spécif
 ```yaml
 jobs:
   job_id:
+    # ...
+
+    # Add "id-token" with the intended permissions.
     permissions:
       contents: 'read'
       id-token: 'write'
+
     steps:
+      # actions/checkout MUST come before auth
+      - uses: 'actions/checkout@v3'
+
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
-        uses: 'google-github-actions/auth@v0.3.1'
+        uses: 'google-github-actions/auth@v1'
         with:
-          token_format: 'access_token'
           workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
           service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
-      # Example of using the token:
-      - name: 'Access secret'
-        run: |-
-          curl https://secretmanager.googleapis.com/v1/projects/my-project/secrets/my-secret/versions/1:access \
-            --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
 ```
 
 Notes: 30:42:24 Alors ici une solution encore mal connue mais très intéressante. Cette Github Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.

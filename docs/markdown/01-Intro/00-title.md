@@ -1,4 +1,5 @@
-<!-- .slide: data-background="./assets/images/devfest-nantes-page.png" class="transition top" -->
+<!-- .slide:  class="transition top" -->
+
 <br>
 
 # **Github Actions**

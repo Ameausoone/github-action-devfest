@@ -38,7 +38,6 @@ Notes: Au lieu d'avoir un fichier à la racine du projet, on le déplace dans un
 ```yaml
 on: [push, pull_request]
 ```
-
 <!-- .element: class="big-code" -->
 
 Notes: Généralement l'event qui va déclencher un pipeline, ce sera le commit, puis on va mettre des conditions. Ici c'est différent, et c'est un gros point fort de Github actions, on va déclencher un pipeline sur un événement. Ici on a un exemple simple, ➡️ mais..
@@ -77,9 +76,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js 12.0
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: 12.0
     - run: npm ci
@@ -115,7 +114,8 @@ Notes: 11:54:24 Donc on a des features classiques mais toujours pratiques. On pe
 ```yaml
 steps:
   - name: Create todo file
-    run: echo "Hello Devfest Lille 2021" > do-it.txt
+    run: echo "Hello World" > do-it.txt 
+    shell: bash
 ```
 
 <!-- .element: class="big-code" -->
@@ -125,7 +125,7 @@ Notes: Donc ici via la command `run`, on peut exécuter du shell ou des scripts 
 ##==##
 
 <!-- .slide: class="with-code max-height" -->
-
+o
 # Docker
 
 ```yaml

@@ -12,10 +12,10 @@ Notes: 19:33:20
 ```yaml
 steps:
   - name: Checkout code
-    uses: actions/checkout@v2
+    uses: actions/checkout@v4
 
   - name: Install Node.js
-    uses: actions/setup-node@v1
+    uses: actions/setup-node@v3
 ```
 <!-- .element: class="big-code" -->
 

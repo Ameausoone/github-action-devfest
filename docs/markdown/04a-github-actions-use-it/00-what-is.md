@@ -1,10 +1,11 @@
 
 # What is a Github Action ?
 <br><br>
+<!-- TODO reformulate unit action -->
 * Unit action
 * With Inputs and Outputs
 * With documentation `README.md` !
-* Easily interact with Pipeline, git and Github API
+* Easily interact with the workflow, git and Github API
 <!-- .element: class="list-fragment" -->
 
 Notes: 15:02:24 C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
@@ -25,7 +26,7 @@ Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
 
 ##==##
 
-# "Builtin" actions
+# Official Github actions
 <br>
 
 ## Github provides a lot of actions
@@ -35,7 +36,7 @@ Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
 - [actions/checkout](https://github.com/actions/checkout) - _Setup your repository on your workflow._
 - [actions/cache](https://github.com/actions/cache) - _Cache dependencies and build outputs in GitHub Actions._
 - [github/super-linter](https://github.com/github/super-linter) - _Linter for a lot of languages_
-- [github/codeql-action](https://github.com/github/codeql-action) - _Run Codeql_
+- [github/codeql-action](https://github.com/github/codeql-action) - _Detect security vulnerabilies_
 - [...]
 <!-- .element: class="list-fragment" -->
 
@@ -70,7 +71,6 @@ Notes: 18:10:24 C'est une convention dans les actions github, une action setup- 
 
 - [actions/](https://github.com/actions/)
   - [upload-artifact](https://github.com/actions/upload-artifact) - _Upload artifacts from your workflow._
-  - [cache](https://github.com/actions/cache) - _Manage cache._
   - [github-script](https://github.com/actions/github-script) - _Write a script for GitHub API and the workflow contexts._
   - [create-release](https://github.com/actions/create-release) - _An Action to create releases via the GitHub Release API_.
   - [upload-release-asset](https://github.com/actions/upload-release-asset) - _An Action to upload a release asset via the GitHub Release API_.
@@ -118,13 +118,3 @@ Notes: On peut trouver les Github Action sur la marketplace, une fois l'action c
 <!-- .element: class="list-fragment" -->
 
 Notes: 21:18:24
-
-##==##
-
-# [sdras/awesome-actions](https://github.com/sdras/awesome-actions)
-
-##  A curated list of awesome actions to use on GitHub
-
-![marketplace h-700 center](./assets/images/awesome-actions.png)
-
-Notes: Un petit focus sur awesome-actions, c'est un projet qui a commencé très tôt sur les Github actions. Qui liste des github actions intéressante. Je trouve que c'est un bon point d'entrée pour découvrir des github actions communautaires. ➡️ Oui là c'est le moment de vous faire une petite démo
