@@ -18,7 +18,7 @@ Notes: Je vais faire une démo dont vous êtes le héro, je vais vous demander d
 
 ##==##
 
-# How do I 
+# How do I
 
 <!-- .slide: class="with-code max-height" -->
 

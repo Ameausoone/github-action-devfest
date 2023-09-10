@@ -92,7 +92,6 @@ Notes: à l'inverse, quand vous maintenez un projet, Désormais, vous devez vali
 
 <!-- .element: class="big-code" -->
 
-
 Notes: voilà je résume ici les différentes possibilités pour appeler une github action, via une branche, un tag, un commitId, ou sur la branche par défaut.
 
 <!-- .element: class="big-code" -->
@@ -206,7 +205,7 @@ steps:
 
 <!-- .element: class="big-code" -->
 
-Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs. ➡️ Alors question : qui a déjà enregistré un token sur son poste ou sur un outil de CI pour accéder à une API ? Qui les renouvelle régulièrement ? 
+Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs. ➡️ Alors question : qui a déjà enregistré un token sur son poste ou sur un outil de CI pour accéder à une API ? Qui les renouvelle régulièrement ?
 
 ##==##
 

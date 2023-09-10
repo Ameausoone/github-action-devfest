@@ -119,7 +119,6 @@ Notes: GitHub fourni également un CLI, qui permet de faire des actions sur GitH
 
 Notes: GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
 
-
 ##==##
 
 <!-- .slide: class="full-center" -->

@@ -186,7 +186,6 @@ Notes: Job summaries avec du markdown
 
 Notes: Donc on peut également jouer une étape dans un container docker. Mais le plus intéressant.
 
-
 ##==##
 
 <!-- .slide: class="with-code" -->
@@ -227,4 +226,3 @@ jobs:
 <!-- .element: class="big-code" -->
 
 Notes: Donc on peut également jouer une étape dans un container docker. Mais le plus intéressant.
-

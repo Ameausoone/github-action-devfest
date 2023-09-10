@@ -20,6 +20,6 @@ jobs:
 
 ##==##
 
-# Your turn ! 
+# Your turn !
 
 ![How do I h-600 center](./assets/images/qrcode_github.com.png)

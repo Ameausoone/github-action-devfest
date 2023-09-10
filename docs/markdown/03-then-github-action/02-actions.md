@@ -19,5 +19,4 @@ steps:
 ```
 <!-- .element: class="big-code" -->
 
-Notes: Il s'agit de déléguer une étape d'un pipeline à une github action, et c'est là que GitHub action devient très intéressant..... Alors, qu'est-ce qu'une GitHub Action ? 
-
+Notes: Il s'agit de déléguer une étape d'un pipeline à une github action, et c'est là que GitHub action devient très intéressant..... Alors, qu'est-ce qu'une GitHub Action ?
