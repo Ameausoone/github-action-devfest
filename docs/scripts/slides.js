@@ -6,13 +6,16 @@ function intro() {
   return [
   '01-Intro/00-title.md',
   '01-Intro/01-speaker-ame.md',
-  '01-Intro/02-speaker-rle.md',
-  '01-Intro/03-experience.md'
-  ];
+  '01-Intro/02-experience.md',
+  '01-Intro/03-speaker-rle.md',
+  '01-Intro/04-survey.md'
+  ]
 }
 
 function cicd_journey() {
-  return ['02-cicd-journey/00-small-history.md']
+  return [
+  '02-cicd-journey/00-small-history.md'
+  ]
 }
 
 function then_github_action() {

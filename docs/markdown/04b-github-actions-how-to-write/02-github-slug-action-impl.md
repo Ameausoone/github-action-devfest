@@ -24,7 +24,7 @@ short_sha() {
 } >>"$GITHUB_ENV"
 ```
 
-Notes: La première implémentation était une container action qui utilise du sed. Là c'est la toute première implémentation. ça s'est étoffé depuis, il y a plus de variables disponibles maintenant. Alors question : qui a déjà contribué sur un pipeline ? Qui a ajouté des tests unitaires sur un pipeline ? C'est l'une de mes premières contributions : c'est l'ajout de tests unitaires avec bats. C'est tout simple, mais l'idée est là : avoir une github action qui fait un job simple mais le faire bien. ➡️ Alors on a une issue qui est tombé ensuite  
+Notes: La première implémentation était une container action qui utilise du sed. Là c'est la toute première implémentation. ça s'est étoffé depuis, il y a plus de variables disponibles maintenant. Alors question : qui a déjà contribué sur un workflow ? Qui a ajouté des tests unitaires sur un workflow ? C'est l'une de mes premières contributions : c'est l'ajout de tests unitaires avec bats. C'est tout simple, mais l'idée est là : avoir une github action qui fait un job simple mais le faire bien. ➡️ Alors on a une issue qui est tombé ensuite  
 
 ##==##
 

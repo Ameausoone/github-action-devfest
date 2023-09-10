@@ -22,7 +22,7 @@ Notes: Pour utiliser une github action, il suffit de référencer le repo, par d
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Out of the box
 
-Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
+Notes: Qu'est-ce que Github propose "out ot the box" pour utiliser github Actions
 
 ##==##
 
@@ -81,6 +81,44 @@ Notes: 18:10:24 C'est une convention dans les actions github, une action setup- 
 <!-- .element: class="list-fragment" -->
 
 Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. ➡️ Et pour vous faciliter la tâche, il y a également des 
+
+##==##
+
+# 'gh' CLI
+<br>
+
+## Github also provides a CLI : `gh`
+
+<br>
+
+- `gh repo clone` - _Clone a repository locally_
+- `gh pr create` - _Create a pull request_
+- `gh workflow run` - _Run a workflow_
+- `gh issue create` - _Create an issue_
+<!-- .element: class="list-fragment" -->
+
+Notes: Github fourni également un CLI, qui permet de faire des actions sur Github, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
+
+##==##
+
+# Issue Ops
+<br>
+
+## [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/)
+
+<br>
+
+- Create a branch.
+- Add commits to your branch.
+- Open a pull request.
+- Gather feedback plus peer reviews.
+- Deploy your change.
+- Validate.
+- Merge your branch to the main / master branch.
+<!-- .element: class="list-fragment" -->
+
+Notes: Github fourni également un CLI, qui permet de faire des actions sur Github, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
+
 
 ##==##
 

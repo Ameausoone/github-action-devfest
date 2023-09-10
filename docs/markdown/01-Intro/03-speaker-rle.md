@@ -2,16 +2,16 @@
 
 # Hello
 
-![speaker](./assets/images/ameausoone.jpg)
+![speaker](./assets/images/rlespinasse.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Antoine Méausoone
+## Romain Lespinasse
 
 ### Cloud Architect
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @ameausoone
+### @rlespinasse
 
 <!-- .element: class="icon-twitter icon-second" -->
 
