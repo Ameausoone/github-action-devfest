@@ -40,7 +40,7 @@ on: [push, pull_request]
 ```
 <!-- .element: class="big-code" -->
 
-Notes: Généralement l'event qui va déclencher un workflow, ce sera le commit, puis on va mettre des conditions. Ici c'est différent, et c'est un gros point fort de Github actions, on va déclencher un workflow sur un événement. Ici on a un exemple simple, ➡️ mais..
+Notes: Généralement l'event qui va déclencher un workflow, ce sera le commit, puis on va mettre des conditions. Ici c'est différent, et c'est un gros point fort de GitHub actions, on va déclencher un workflow sur un événement. Ici on a un exemple simple, ➡️ mais..
 
 ##==##
 

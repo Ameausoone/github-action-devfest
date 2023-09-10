@@ -1,35 +1,35 @@
 
-# What is a Github Action ?
+# What is a GitHub Action ?
 <br><br>
 <!-- TODO reformulate unit action -->
 * Unit action
 * With Inputs and Outputs
 * With documentation `README.md` !
-* Easily interact with the workflow, git and Github API
+* Easily interact with the workflow, git and GitHub API
 <!-- .element: class="list-fragment" -->
 
 Notes: 15:02:24 C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
 
 ##==##
 
-# How to call a Github Action ?
+# How to call a GitHub Action ?
 <!-- .slide: class="full-center" -->
 ![call h-700](./assets/images/call-an-action.png)
 
-Notes: Pour utiliser une github action, il suffit de référencer le repo, par défaut, ça utilise la branche par défaut, mais on peut spécifier une autre branche, un tag, ou un commitId, on va voir plus loin l'intérêt que ça a. ... Alors Github fourni une série de Github action
+Notes: Pour utiliser une github action, il suffit de référencer le repo, par défaut, ça utilise la branche par défaut, mais on peut spécifier une autre branche, un tag, ou un commitId, on va voir plus loin l'intérêt que ça a. ... Alors GitHub fourni une série de GitHub action
 
 ##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Out of the box
 
-Notes: Qu'est-ce que Github propose "out ot the box" pour utiliser github Actions
+Notes: Qu'est-ce que GitHub propose "out ot the box" pour utiliser github Actions
 
 ##==##
 
-# Official Github actions
+# Official GitHub actions
 <br>
 
-## Github provides a lot of actions
+## GitHub provides a lot of actions
 
 <br>
 
@@ -40,7 +40,7 @@ Notes: Qu'est-ce que Github propose "out ot the box" pour utiliser github Action
 - [...]
 <!-- .element: class="list-fragment" -->
 
-Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour installer vos dépendances, pour java, node, python etc. Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
+Notes: Il y a bcp d'actions fournies par GitHub nativement. Notamment pour installer vos dépendances, pour java, node, python etc. Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
 
 ##==##
 # "Setup" Actions
@@ -56,7 +56,7 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
   - [elixir](https://github.com/actions/setup-elixir)
 <!-- .element: class="list-fragment" -->
 
-Notes: vous avez la liste des sdk disponible dans vos github actions fourni par Github actions. 
+Notes: vous avez la liste des sdk disponible dans vos github actions fourni par GitHub actions. 
 ##==##
 
 # Closer look to setup-*
@@ -67,7 +67,7 @@ Notes: 18:10:24 C'est une convention dans les actions github, une action setup- 
 
 ##==##
 
-# Github Automation
+# GitHub Automation
 
 - [actions/](https://github.com/actions/)
   - [upload-artifact](https://github.com/actions/upload-artifact) - _Upload artifacts from your workflow._
@@ -87,7 +87,7 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 # 'gh' CLI
 <br>
 
-## Github also provides a CLI : `gh`
+## GitHub also provides a CLI : `gh`
 
 <br>
 
@@ -97,7 +97,7 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 - `gh issue create` - _Create an issue_
 <!-- .element: class="list-fragment" -->
 
-Notes: Github fourni également un CLI, qui permet de faire des actions sur Github, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
+Notes: GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
 
 ##==##
 
@@ -117,7 +117,7 @@ Notes: Github fourni également un CLI, qui permet de faire des actions sur Gith
 - Merge your branch to the main / master branch.
 <!-- .element: class="list-fragment" -->
 
-Notes: Github fourni également un CLI, qui permet de faire des actions sur Github, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
+Notes: GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc. Et on peut l'utiliser dans nos pipelines.
 
 
 ##==##
@@ -127,15 +127,15 @@ Notes: Github fourni également un CLI, qui permet de faire des actions sur Gith
 
 ![marketplace h-700 center](./assets/images/starter-workflows.png)
 
-Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
+Notes: GitHub fourni également des workflow basiques, c'est directement intégré dans l'interface de GitHub, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
 
 ##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Or by the community...
 
-You can develop your own Github action !!!
+You can develop your own GitHub action !!!
 
-Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant, on peut développer ses propres Github action ! ... 2 possibilités
+Notes: 28:26:40 et donc c'est là où GitHub Actions devient très intéressant, on peut développer ses propres GitHub action ! ... 2 possibilités
 
 ##==##
 
@@ -143,7 +143,7 @@ Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant,
 
 ![marketplace h-700 center](./assets/images/marketplace.png)
 
-Notes: On peut trouver les Github Action sur la marketplace, une fois l'action créé, on peut  la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
+Notes: On peut trouver les GitHub Action sur la marketplace, une fois l'action créé, on peut  la proposer sur la Marketplace de GitHub. GitHub fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
 
 ##==##
 

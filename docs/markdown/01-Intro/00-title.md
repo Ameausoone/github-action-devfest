@@ -2,8 +2,8 @@
 
 <br>
 
-# **Github Actions**
+# **GitHub Actions**
 
-![Github Actions's Log](./assets/images/github-actions-logo.png) <h3 style="color: black">Enfin des workflows<br>accessible aux développeurs</h3>
+![GitHub Actions's Log](./assets/images/github-actions-logo.png) <h3 style="color: black">Enfin des workflows<br>accessible aux développeurs</h3>
 
-Notes: Bonjour à tous, bienvenue à ce talk sur Github Actions. Je vais commencer par me présenter :
+Notes: Bonjour à tous, bienvenue à ce talk sur GitHub Actions. Je vais commencer par me présenter :

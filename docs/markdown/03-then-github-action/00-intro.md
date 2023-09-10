@@ -1,10 +1,10 @@
 <!-- .slide: class="transition sfeir-bg-red top" -->
 
-# Github Actions : CICD by Github
+# GitHub Actions : CICD by GitHub
 
-![Github Actions's Log](./assets/images/github-actions-logo.png)
+![GitHub Actions's Log](./assets/images/github-actions-logo.png)
 
-Notes: 8:53:20 et là dessus arrive Github Actions.
+Notes: 8:53:20 et là dessus arrive GitHub Actions.
 
 ##==##
 
@@ -12,12 +12,12 @@ Notes: 8:53:20 et là dessus arrive Github Actions.
 
 <br><br>
 
-- 2017/2018 : Github starts to work on Github Action (with HCL !)
-- Mid-2018 : MS acquire Github $$$
-- Github Action goes YAML \o/
+- 2017/2018 : GitHub starts to work on GitHub Action (with HCL !)
+- Mid-2018 : MS acquire GitHub $$$
+- GitHub Action goes YAML \o/
 - General availability end-2019
-- Environments, Custom Github Runner, etc
-- [Github Roadmap](https://github.com/orgs/github/projects/4247/views/1)
+- Environments, Custom GitHub Runner, etc
+- [GitHub Roadmap](https://github.com/orgs/github/projects/4247/views/1)
 <!-- .element: class="list-fragment" -->
 
-Notes: un rapide historique de Github Actions .
+Notes: un rapide historique de GitHub Actions .

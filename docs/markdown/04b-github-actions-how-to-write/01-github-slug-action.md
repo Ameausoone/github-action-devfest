@@ -1,8 +1,8 @@
-# Github-slug-action
+# GitHub-slug-action
 
 ![marketplace h-800 center](./assets/images/github-slug-action.png)
 
-Notes: Je voulais faire un petit focus sur une Github action que je maintiens avec mon collègue Romain Lespinasse.
+Notes: Je voulais faire un petit focus sur une GitHub action que je maintiens avec mon collègue Romain Lespinasse.
 
 ##==##
 
@@ -10,7 +10,7 @@ Notes: Je voulais faire un petit focus sur une Github action que je maintiens av
 
 ![start h-600 center](./assets/images/twitter-start.png)
 
-Notes: Alors comment ça a commencé ? En fait par un tweet, où j'utilisais Github action, et il me manquait une variable d'environnement bien pratique sur Gitlab CI. 
+Notes: Alors comment ça a commencé ? En fait par un tweet, où j'utilisais GitHub action, et il me manquait une variable d'environnement bien pratique sur Gitlab CI. 
 
 ##==##
 
@@ -18,7 +18,7 @@ Notes: Alors comment ça a commencé ? En fait par un tweet, où j'utilisais Git
 
 ![try h-500 center](./assets/images/twitter-try.png)
 
-Notes: Et du coup, Romain a boostrap une Github Action
+Notes: Et du coup, Romain a boostrap une GitHub Action
 
 ##==##
 

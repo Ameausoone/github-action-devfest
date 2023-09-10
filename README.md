@@ -1,4 +1,4 @@
-# Github Actions : enfin des pipelines accessible aux développeurs
+# GitHub Actions : enfin des pipelines accessible aux développeurs
 
 ## Slides
 

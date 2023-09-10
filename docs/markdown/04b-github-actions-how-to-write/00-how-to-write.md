@@ -1,6 +1,6 @@
 <!-- .slide: class="transition sfeir-bg-red" -->
 
-# How to write a Github action
+# How to write a GitHub action
 
 ##==##
 
@@ -11,7 +11,7 @@
 - ![docker h-50](./assets/images/docker-logo.png) Container action
 - ![typescript h-50](./assets/images/ts-logo.png) Typescript action (or Javascript)
 - and now : new Composite action !
-- Github provides templates on [github.com/actions](https://github.com/actions)
+- GitHub provides templates on [github.com/actions](https://github.com/actions)
 <!-- .element: class="list-fragment" -->
 
 Notes: 3 types de github action : javascript action ou une container action. Pour les actions typescript, javascript et container , ils existent des templates pour ne pas partir de zéro que vous trouverez sur github.com/actions
@@ -109,7 +109,7 @@ Notes: et un fichier action.yml, c'est le même fichier que pour les actions de 
 <!-- * Faster than container action
 - Run on every runner -->
 
-Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouvez l'écrire en javascript ou en typescript. C'est plutôt l'action privilégié par Github. Si vous avez besoin d'intéragir avec une API, c'est le choix idéal. ➡️ Il y a d'ailleurs plusieurs librairies npm disponibles.
+Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouvez l'écrire en javascript ou en typescript. C'est plutôt l'action privilégié par GitHub. Si vous avez besoin d'intéragir avec une API, c'est le choix idéal. ➡️ Il y a d'ailleurs plusieurs librairies npm disponibles.
 
 ##==##
 
@@ -117,12 +117,12 @@ Notes: Une action de type Javascript s'éxécute nativement sur la vm, vous pouv
 
 <br><br>
 
-- @actions/core => interact with Github action workflow(inputs,env var, etc)
-- @actions/github => interact with Github API
+- @actions/core => interact with GitHub action workflow(inputs,env var, etc)
+- @actions/github => interact with GitHub API
 - @actions/exec => execute local process
 <!-- .element: class="list-fragment" -->
 
-Notes: core qui permets de travailler avec l'api de Github Actions, et github pour intéragir avec l'api Github. Exec pour exécuter des commandes sur le host. Mais évidemment, et c'est tout l'intérêt, vous pouvez importer n'importe quelle librairie npm. ➡️ La 3éme option ce sont les composites actions, qui présentent un tout nouvel intérêt depuis peu. En fait il était possible d'enchainer des commandes shell que l'on compilait pour une faire une github action, mais depuis qques mois. 
+Notes: core qui permets de travailler avec l'api de GitHub Actions, et github pour intéragir avec l'api GitHub. Exec pour exécuter des commandes sur le host. Mais évidemment, et c'est tout l'intérêt, vous pouvez importer n'importe quelle librairie npm. ➡️ La 3éme option ce sont les composites actions, qui présentent un tout nouvel intérêt depuis peu. En fait il était possible d'enchainer des commandes shell que l'on compilait pour une faire une github action, mais depuis qques mois. 
 
 ##==##
 

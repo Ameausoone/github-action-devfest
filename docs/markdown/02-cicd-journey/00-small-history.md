@@ -2,7 +2,7 @@
 
 # A CICD Journey
 
-Notes: 1:46:40 Alors je voulais centrer ma présentation sur l'expérience que les développeurs, et comment Github Actions, à mon avis, facilite le travail des développeurs et des DevOps. Pour comprendre l'expérience actuel que les développeurs ont avec la CICD, je voulais d'abord refaire un petit historique de la CICD de ses 10 dernières années. 
+Notes: 1:46:40 Alors je voulais centrer ma présentation sur l'expérience que les développeurs, et comment GitHub Actions, à mon avis, facilite le travail des développeurs et des DevOps. Pour comprendre l'expérience actuel que les développeurs ont avec la CICD, je voulais d'abord refaire un petit historique de la CICD de ses 10 dernières années. 
 
 ##==##
 

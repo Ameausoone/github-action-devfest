@@ -2,7 +2,7 @@
 
 # Security
 
-Notes: 36:26:40 Github action est donc très pratique, mais n'est pas exempt de défaut, notamment niveau sécurité, on va voir 2 problèmes notamment.
+Notes: 36:26:40 GitHub action est donc très pratique, mais n'est pas exempt de défaut, notamment niveau sécurité, on va voir 2 problèmes notamment.
 
 ##==##
 
@@ -161,7 +161,7 @@ le TOKEN a des droits read only.
 
 ##==##
 
-# Github token scope
+# GitHub token scope
 
 <!-- .slide: class="with-code" -->
 
@@ -236,4 +236,4 @@ jobs:
           service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
 ```
 
-Notes: 30:42:24 Alors ici une solution encore mal connue mais très intéressante. Cette Github Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.
+Notes: 30:42:24 Alors ici une solution encore mal connue mais très intéressante. Cette GitHub Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.

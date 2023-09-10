@@ -1,12 +1,12 @@
 <!-- .slide: class="transition sfeir-bg-red" -->
 
-# Or ... a "Github Action"
+# Or ... a "GitHub Action"
 
 Notes: 19:33:20
 
 ##==##
 <!-- .slide: class="with-code" -->
-# Use a Github Action
+# Use a GitHub Action
 <br>
 
 ```yaml
@@ -19,5 +19,5 @@ steps:
 ```
 <!-- .element: class="big-code" -->
 
-Notes: Il s'agit de déléguer une étape d'un pipeline à une github action, et c'est là que Github action devient très intéressant..... Alors, qu'est-ce qu'une Github Action ? 
+Notes: Il s'agit de déléguer une étape d'un pipeline à une github action, et c'est là que GitHub action devient très intéressant..... Alors, qu'est-ce qu'une GitHub Action ? 
 
