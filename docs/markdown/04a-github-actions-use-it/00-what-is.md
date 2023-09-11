@@ -1,14 +1,14 @@
 
 # What is a GitHub Action ?
 <br><br>
-<!-- TODO reformulate unit action -->
-* Unit action
+
+* Standalone action
 * With Inputs and Outputs
 * With documentation `README.md` !
 * Easily interact with the workflow, git and GitHub API
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine** (15:02:24)
+Notes: **Romain** (15:02:24)
 
 C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace, qui va effectuée une tâche, idéalement bien testé, généralement bien documenté.
 
@@ -18,9 +18,12 @@ C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace,
 <!-- .slide: class="full-center" -->
 ![call h-700](./assets/images/call-an-action.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Pour utiliser une github action, il suffit de référencer le repo, par défaut, ça utilise la branche par défaut, mais on peut spécifier une autre branche, un tag, ou un commitId, on va voir plus loin l'intérêt que cela a.
+Pour utiliser une GitHub action, référencer le repo.
+
+⚠️ ça utilise la branche par défaut, mais on peut spécifier une autre reference (branche, un tag, ou un commitId).
+On va voir plus loin l'intérêt que cela a.
 
 Alors GitHub fourni une série de GitHub actions
 
@@ -28,9 +31,9 @@ Alors GitHub fourni une série de GitHub actions
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Out of the box
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Qu'est-ce que GitHub propose "out ot the box" pour utiliser github Actions
+Qu'est-ce que GitHub propose "out ot the box" pour utiliser GitHub actions
 
 ##==##
 
@@ -48,7 +51,7 @@ Qu'est-ce que GitHub propose "out ot the box" pour utiliser github Actions
 - [...]
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Il y a bcp d'actions fournies par GitHub nativement.
 
@@ -70,9 +73,9 @@ Il y a également un linter. Je vais faire un petit focus sur le fonctionnement 
   - [elixir](https://github.com/actions/setup-elixir)
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
-vous avez la liste des sdk disponible dans vos GitHub actions fourni par GitHub.
+Vous avez la liste des SDK disponible dans vos GitHub actions fourni par GitHub.
 
 ##==##
 
@@ -80,7 +83,7 @@ vous avez la liste des sdk disponible dans vos GitHub actions fourni par GitHub.
 <!-- .slide: class="full-center" -->
 ![call h-800](./assets/images/setup-action.png)
 
-Notes: **Antoine** (18:10:24)
+Notes: **Romain** (18:10:24)
 
 C'est une convention dans les actions github, une action `setup-*` va installer l'application directement sur le runner, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
 
@@ -99,13 +102,13 @@ C'est une convention dans les actions github, une action `setup-*` va installer 
   - [delete-package-versions](https://github.com/actions/delete-package-versions) - _Delete versions of a package from GitHub Packages_.
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
 D'autres exemples de github actions: comme upload artifact, download-artifact.
 
 Create release qui comme son nom l'indique qui va créer une release github ou comme github-script.
 
-➡️ Et pour vous faciliter la tâche, il y a également des
+➡️ Et pour vous faciliter la tâche, GitHub ne s'arrête pas là
 
 ##==##
 
@@ -122,11 +125,13 @@ Create release qui comme son nom l'indique qui va créer une release github ou c
 - `gh issue create` - _Create an issue_
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
 GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc.
 
 Et on peut l'utiliser dans nos pipelines.
+
+⚠️ **Next Speaker** Antoine
 
 ##==##
 
@@ -147,10 +152,6 @@ Et on peut l'utiliser dans nos pipelines.
 <!-- .element: class="list-fragment" -->
 
 Notes: **Antoine**
-
-GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc.
-
-Et on peut l'utiliser dans nos pipelines.
 
 ##==##
 
@@ -173,7 +174,7 @@ You can develop your own GitHub action !!!
 
 Notes: **Antoine** (28:26:40)
 
-Et donc c'est là où GitHub Actions devient très intéressant, on peut développer ses propres GitHub action !
+On peut développer ses propres GitHub action ! 🎉
 
 2 possibilités
 

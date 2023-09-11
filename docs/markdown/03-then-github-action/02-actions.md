@@ -2,7 +2,9 @@
 
 # Or ... a "GitHub Action"
 
-Notes: **Antoine** (19:33:20)
+Notes: **Romain** (19:33:20)
+
+Mais le plus intéressant
 
 ##==##
 <!-- .slide: class="with-code" -->
@@ -19,8 +21,8 @@ steps:
 ```
 <!-- .element: class="big-code" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Il s'agit de déléguer une étape d'un pipeline à une github action, et c'est là que GitHub action devient très intéressant...
+Il s'agit de déléguer une étape d'un pipeline à une GitHub action.
 
 Alors, qu'est-ce qu'une GitHub Action ?

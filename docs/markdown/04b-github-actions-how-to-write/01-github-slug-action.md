@@ -2,9 +2,9 @@
 
 ![marketplace h-800 center](./assets/images/github-slug-action.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Je voulais faire un petit focus sur une GitHub action que je maintiens avec mon collègue Romain Lespinasse.
+Je voulais faire un petit focus sur une GitHub action que je maintiens avec mon collègue Antoine.
 
 ##==##
 
@@ -12,9 +12,11 @@ Je voulais faire un petit focus sur une GitHub action que je maintiens avec mon 
 
 ![start h-600 center](./assets/images/twitter-start.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Alors comment ça a commencé ? En fait par un tweet, où j'utilisais GitHub action, et il me manquait une variable d'environnement bien pratique sur Gitlab CI.
+Alors comment ça a commencé ? En fait par un tweet de Antoine, où il utilisait GitHub action,
+
+Mais il me manquait une variable d'environnement bien pratique sur Gitlab CI.
 
 ##==##
 
@@ -22,9 +24,11 @@ Alors comment ça a commencé ? En fait par un tweet, où j'utilisais GitHub act
 
 ![try h-500 center](./assets/images/twitter-try.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
-Et du coup, Romain a boostrap une GitHub Action
+Et du coup, comme il était tard,
+
+Je me suis dit pourquoi ne pas tester la création d'une GitHub Action.
 
 ##==##
 
@@ -36,7 +40,7 @@ Et du coup, Romain a boostrap une GitHub Action
 
 ![marketplace h-500 center](./assets/images/stackoverflow-github-actions.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Ca réponds à cette question : comment extraire des variables d'environnement fourni par GitHub, une variable que l'on puisse utiliser facilement dans un pipeline.
 
@@ -61,7 +65,7 @@ Ca réponds à cette question : comment extraire des variables d'environnement f
     echo "   base ref            : ${{ env.GITHUB_BASE_REF_SLUG }}"              # main
 ```
 
-Notes: **Antoine** (40:06:24)
+Notes: **Romain** (40:06:24)
 
 Vous avez juste à rajouter 2 lignes, et vous allez retrouver toutes ces variables que vous pouvez consommer facilement.
 

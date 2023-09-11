@@ -24,15 +24,15 @@ short_sha() {
 } >>"$GITHUB_ENV"
 ```
 
-Notes: **Antoine**
+Notes: **Romain**
 
 La première implémentation était une container action qui utilise du sed.
 
-Là c'est la toute première implémentation. ça s'est étoffé depuis, il y a plus de variables disponibles maintenant.
+Elle s'est étoffée de plus de variables maintenant.
 
 Alors question : qui a déjà contribué sur un workflow ? Qui a ajouté des tests unitaires sur un workflow ?
 
-C'est l'une de mes premières contributions : c'est l'ajout de tests unitaires avec bats.
+C'est l'une de ces premières contributions : c'est l'ajout de tests unitaires avec **bats**.
 C'est tout simple, mais l'idée est là : avoir une GitHub action qui fait un job simple mais le faire bien.
 
 ➡️ Alors on a une issue qui est tombé ensuite  
@@ -43,7 +43,7 @@ C'est tout simple, mais l'idée est là : avoir une GitHub action qui fait un jo
 
 ![issue h-400 center](./assets/images/issue-other-os.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
 La GitHub action ne fonctionne que pour les runners linux, en effet les container action ne sont compatibles que Linux, et ne fonctionnent pas sur Windows et Mac.
 
@@ -55,9 +55,9 @@ La GitHub action ne fonctionne que pour les runners linux, en effet les containe
 
 ![pr h-400 center](./assets/images/issue-os-pr.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
-J'ai proposé une réécriture complète en TypeScript.
+Antoine a proposé une réécriture complète en TypeScript.
 
 ##==##
 
@@ -65,7 +65,7 @@ J'ai proposé une réécriture complète en TypeScript.
 
 ![merged h-600 center](./assets/images/twitter-merge-os-pr.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Un autre avantage, c'est que l'on évite la phase de construction de l'image docker.
 
@@ -75,11 +75,13 @@ Une GitHub action JavaScript démarre un peu plus vite qu'une container action.
 
 # Slug-action | Result
 
-![search h-600 center](./assets/images/github-code-search.png)
+![search h-600 center](./assets/images/github-slug-action-dependents.png)
 
-Notes: **Antoine** (43:14:24)
+Notes: **Romain** (43:14:24)
 
-Résultat: Notre GitHub action est utilisé par près de 2000 projets opensource.
+Cette GitHub action est utilisée par près plus de 9K projets OpenSource.
+
+Pas de stats sur les utilisateurs privés, mais on sait qu'elle s'est installé chez Decathlon ou ADEO.
 
 ##==##
 
@@ -87,7 +89,7 @@ Résultat: Notre GitHub action est utilisé par près de 2000 projets opensource
 
 # Action | 3 advises to write an action
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Alors 3 conseils si vous voulez écrire une GitHub action.
 
@@ -99,7 +101,7 @@ Alors 3 conseils si vous voulez écrire une GitHub action.
 
 > THE RIGHT TOOL FOR THE RIGHT JOB.
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Implémenter une action unitaire qui fait bien le job.
 
@@ -115,7 +117,7 @@ Qui réponds à un besoin.
 - ![stale h-150 center](./assets/images/github-stale-branches.png)
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Alors je vous ai dit vous pouvez référencer un tag ou une branche, vous pouvez simplement utiliser une branche jusqu'au prochain breaking change, et ensuite passer à la branche suivante.
 
@@ -127,7 +129,7 @@ Alors je vous ai dit vous pouvez référencer un tag ou une branche, vous pouvez
 
 ![rtfm h-500 center](./assets/images/RTFM.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Une bonne documentation ! Aidez vos utilisateurs, vous avez le fichier README dispo pour cela.
 

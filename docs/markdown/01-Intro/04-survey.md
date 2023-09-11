@@ -7,6 +7,8 @@
 
 ![survey](./assets/images/qrcode_openfeedback.io.png)
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Petit sondage rapide, qui êtes vous ?
+
+⚠️ **Next Speaker** Antoine

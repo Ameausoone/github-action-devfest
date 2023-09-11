@@ -171,3 +171,5 @@ include:
 Notes: **Antoine**
 
 Et donc pour les développeurs, quand ils veulent rajouter une étape au workflow, ou changer la version de node...
+
+⚠️ **Next Speaker** Romain

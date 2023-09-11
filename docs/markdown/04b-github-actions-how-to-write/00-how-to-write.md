@@ -2,6 +2,8 @@
 
 # How to write a GitHub action
 
+Notes: **Antoine**
+
 ##==##
 
 # 3 ways
@@ -217,3 +219,5 @@ jobs:
 Notes: **Antoine** (36:58:24)
 
 Et ici on va appeler cette github action comme une GitHub action classique.
+
+⚠️ **Next Speaker** Romain

@@ -85,17 +85,16 @@ A l'inverse, quand vous maintenez un projet, désormais, vous devez valider manu
 
 ```yaml
 # safe
-- uses: owner/repo@v3.x
-```
+- uses: owner/repo@v2.x # branch
 
-```yaml
 # safer
-- uses: owner/repo@v2.1.3
-```
+- uses: owner/repo@v2 # major tag
 
-```yaml
+# safer
+- uses: owner/repo@v2.1.3 # specific tag
+
 # ultra safe
-- uses: owner/repo@v2f05f8b5cbdfb8b37e68426a162be978e4e82550
+- uses: owner/repo@v2f05f8b5cbdfb8b37e68426a162be978e4e82550 # commit reference
 ```
 
 ```yaml

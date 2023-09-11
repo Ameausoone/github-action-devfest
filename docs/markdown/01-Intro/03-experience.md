@@ -43,3 +43,5 @@ Puis j'ai fait pas mal de GitlabCI, et depuis un an, je pratique beaucoup GitHub
 Disclaimer : cette présentation n'est pas une comparaison avec les autres outils de CICD.
 
 ➡️ Alors j'aurais voulu commencé par connaître mon public
+
+⚠️ **Next Speaker** Romain

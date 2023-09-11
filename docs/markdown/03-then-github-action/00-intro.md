@@ -4,7 +4,7 @@
 
 ![center h-500](./assets/images/github-actions-logo.png)
 
-Notes: **Antoine** (8:53:20)
+Notes: **Romain** (8:53:20)
 
 Et là dessus arrive GitHub Actions.
 
@@ -20,6 +20,8 @@ Et là dessus arrive GitHub Actions.
 - [GitHub Roadmap](https://github.com/orgs/github/projects/4247/views/1)
 <!-- .element: class="list-fragment" -->
 
-Notes: **Antoine**
+Notes: **Romain**
 
 Un rapide historique de GitHub Actions.
+
+⚠️ **Next Speaker** Antoine

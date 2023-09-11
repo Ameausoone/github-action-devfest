@@ -2,6 +2,8 @@
 
 # How does it work ?
 
+Notes: **Antoine**
+
 ##==##
 
 # Fresh VM
@@ -282,4 +284,4 @@ Notes: **Antoine**
 
 Donc on peut également jouer une étape dans un container docker.
 
-Mais le plus intéressant.
+⚠️ **Next Speaker** Romain
