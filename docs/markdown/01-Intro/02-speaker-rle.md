@@ -15,6 +15,8 @@
 
 <!-- .element: class="icon-twitter icon-second" -->
 
-Notes:
+Notes: **Antoine**
+
 Je m'appelle **Romain Lespinasse**, je suis Developpeur chez SFEIR.
+
 Mes experiences m'ont faites passer par le Dev back, la culture DevOps, du Cloud, et beaucoup d'automatisation.

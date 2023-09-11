@@ -6,4 +6,8 @@
 
 ## Enfin des workflows accessibles aux développeurs
 
-Notes: Bonjour à tous, bienvenue à ce talk sur GitHub Actions. Je vais commencer par me présenter :
+Notes: **Antoine**
+
+Bonjour à tous, bienvenue à ce talk sur GitHub Actions.
+
+Je vais commencer par me présenter :

@@ -2,15 +2,15 @@
 
 # GitHub Actions : CICD by GitHub
 
-![GitHub Actions's Log](./assets/images/github-actions-logo.png)
+![center h-500](./assets/images/github-actions-logo.png)
 
-Notes: 8:53:20 et là dessus arrive GitHub Actions.
+Notes: **Antoine** (8:53:20)
+
+Et là dessus arrive GitHub Actions.
 
 ##==##
 
 # History
-
-<br><br>
 
 - 2017/2018 : GitHub starts to work on GitHub Action (with HCL !)
 - Mid-2018 : MS acquire GitHub $$$
@@ -20,4 +20,6 @@ Notes: 8:53:20 et là dessus arrive GitHub Actions.
 - [GitHub Roadmap](https://github.com/orgs/github/projects/4247/views/1)
 <!-- .element: class="list-fragment" -->
 
-Notes: un rapide historique de GitHub Actions .
+Notes: **Antoine**
+
+Un rapide historique de GitHub Actions.

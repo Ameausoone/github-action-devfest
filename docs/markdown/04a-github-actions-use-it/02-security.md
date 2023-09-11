@@ -2,7 +2,9 @@
 
 # Security
 
-Notes: 36:26:40 GitHub action est donc très pratique, mais n'est pas exempt de défaut, notamment niveau sécurité, on va voir 2 problèmes notamment.
+Notes: **Antoine** (36:26:40)
+
+GitHub action est donc très pratique, mais n'est pas exempt de défaut, notamment niveau sécurité, on va voir 2 problèmes notamment.
 
 ##==##
 
@@ -12,7 +14,9 @@ Notes: 36:26:40 GitHub action est donc très pratique, mais n'est pas exempt de 
 
 # What happens if an owner delete his action ?
 
-Notes: que se passe-t-il si le propriétaire supprime une action.
+Notes: **Antoine**
+
+Que se passe-t-il si le propriétaire supprime une action.
 
 ##==##
 
@@ -25,7 +29,9 @@ Notes: que se passe-t-il si le propriétaire supprime une action.
 - A "archived" repo still works
 <!-- .element: class="list-fragment" -->
 
-Notes: 24:26:24 ça ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
+Notes: **Antoine** (24:26:24)
+
+Ca ne fonctionne plus, si l'action est critique pour vous est qu'elle peut être susceptible d'être supprimé, faites en fork.
 
 ##==##
 
@@ -35,7 +41,9 @@ Notes: 24:26:24 ça ne fonctionne plus, si l'action est critique pour vous est q
 
 # What happens if an maintener mine ![bitcoin h-100](./assets/images/bitcoin-logo.png) with his action ?
 
-Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets à jour son action pour miner du bitcoin sur vos runners, si vous utilisez la branche par défaut, ou une branche, ou même un tag.
+Notes: **Antoine**
+
+Plus pervers : que se passe-t-il si le propriétaire d'une action, mets à jour son action pour miner du bitcoin sur vos runners, si vous utilisez la branche par défaut, ou une branche, ou même un tag.
 
 ##==##
 
@@ -49,7 +57,11 @@ Notes: Plus pervers : que se passe-t-il si le propriétaire d'une action, mets �
 
 <!-- .element: class="big-code" -->
 
-Notes: Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le long. Dans ce cas, vous êtes sûr d'utiliser une version fixe de la github action.
+Notes: **Antoine**
+
+Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le long.
+
+Dans ce cas, vous êtes sûr d'utiliser une version fixe de la GitHub action.
 
 ##==##
 
@@ -61,7 +73,9 @@ Notes: Solution : dans ce cas, vous pouvez utiliser le commitId, le court ou le 
 
 ![marketplace](./assets/images/first-time-contributor.png)
 
-Notes: à l'inverse, quand vous maintenez un projet, Désormais, vous devez valider manuellement l'exécution d'un pipeline lorsqu'un contributeur vous propose une PR sur un workflow pour la 1ère fois. 
+Notes: **Antoine**
+
+A l'inverse, quand vous maintenez un projet, désormais, vous devez valider manuellement l'exécution d'un pipeline lorsqu'un contributeur vous propose une PR sur un workflow pour la 1ère fois.
 
 ##==##
 
@@ -92,7 +106,9 @@ Notes: à l'inverse, quand vous maintenez un projet, Désormais, vous devez vali
 
 <!-- .element: class="big-code" -->
 
-Notes: voilà je résume ici les différentes possibilités pour appeler une github action, via une branche, un tag, un commitId, ou sur la branche par défaut.
+Notes: **Antoine**
+
+Voilà je résume ici les différentes possibilités pour appeler une GitHub action, via une branche, un tag, un commitId, ou sur la branche par défaut.
 
 <!-- .element: class="big-code" -->
 
@@ -115,7 +131,9 @@ updates:
 
 <!-- .element: class="big-code" -->
 
-Notes: 27:34:24 Et vous pouvez même utiliser dependabot, pour maintenir vos github actions à jour !
+Notes: **Antoine** (27:34:24)
+
+Et vous pouvez même utiliser dependabot, pour maintenir vos GitHub actions à jour !
 
 ##==##
 
@@ -132,7 +150,9 @@ Notes: 27:34:24 Et vous pouvez même utiliser dependabot, pour maintenir vos git
 
 <!-- .element: class="big-code" -->
 
-Notes: Par défaut, quand l'action checkout fait un clone de votre repo, la configuration git du workspace permets d'exécuter des commandes git authentifié, donc si vous n'en avez pas besoin d'effectuer, n'hésitez pas à utiliser l'option persist-credentials, pour que votre code soit en "lecture seule".
+Notes: **Antoine**
+
+Par défaut, quand l'action checkout fait un clone de votre repo, la configuration git du workspace permets d'exécuter des commandes git authentifié, donc si vous n'en avez pas besoin d'effectuer, n'hésitez pas à utiliser l'option persist-credentials, pour que votre code soit en "lecture seule".
 
 ##==##
 
@@ -155,8 +175,11 @@ jobs:
 
 <!-- .element: class="big-code" -->
 
-Notes: pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée. Pour les PR de repos forké,
-le TOKEN a des droits read only.
+Notes: **Antoine**
+
+Pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée.
+
+Pour les PR de repos forké, le TOKEN a des droits read only.
 
 ##==##
 
@@ -182,7 +205,9 @@ permissions:
 
 <!-- .element: class="big-code" -->
 
-Notes: Depuis qques mois, vous pouvez affiner les droits accorder au github token, vous avez 2 permissions basiques read-all et write-all, mais vous pouvez même aller plus loin dans les permissions. 
+Notes: **Antoine**
+
+Depuis quelques mois, vous pouvez affiner les droits accorder au github token, vous avez 2 permissions basiques read-all et write-all, mais vous pouvez même aller plus loin dans les permissions.
 
 ##==##
 
@@ -205,7 +230,13 @@ steps:
 
 <!-- .element: class="big-code" -->
 
-Notes: Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline. Automatiquement les secrets seront masqués dans les logs. ➡️ Alors question : qui a déjà enregistré un token sur son poste ou sur un outil de CI pour accéder à une API ? Qui les renouvelle régulièrement ?
+Notes: **Antoine**
+
+Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline.
+
+Automatiquement les secrets seront masqués dans les logs.
+
+➡️ Alors question : qui a déjà enregistré un token sur son poste ou sur un outil de CI pour accéder à une API ? Qui les renouvelle régulièrement ?
 
 ##==##
 
@@ -235,4 +266,8 @@ jobs:
           service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
 ```
 
-Notes: 30:42:24 Alors ici une solution encore mal connue mais très intéressante. Cette GitHub Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.
+Notes: **Antoine** (30:42:24)
+
+Alors ici une solution encore mal connue mais très intéressante.
+
+Cette GitHub Action développé par Seth Vargo, utilise la fonction de Workload federation identity, ce qui va permettre de connecter l'authentification Google avec un service d'identité qui supporte OpenId connect.

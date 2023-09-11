@@ -4,5 +4,4 @@
 
 ![survey](./assets/images/qrcode_openfeedback.io.png)
 
-
-Notes: 46:22:24
+Notes: **Antoine** (46:22:24)

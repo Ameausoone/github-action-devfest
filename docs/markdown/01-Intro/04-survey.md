@@ -7,4 +7,6 @@
 
 ![survey](./assets/images/qrcode_openfeedback.io.png)
 
-Notes: Petit sondage rapide, qui êtes vous ?
+Notes: **Antoine**
+
+Petit sondage rapide, qui êtes vous ?
