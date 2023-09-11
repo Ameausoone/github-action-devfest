@@ -1,9 +1,9 @@
-<!-- .slide:  class="transition top" -->
+<!-- .slide: class="first-slide" -->
 
-<br>
+![float-right h-400 mt-100](./assets/images/github-actions-logo.png)
 
-# **GitHub Actions**
+# GitHub Actions
 
-![GitHub Actions's Log](./assets/images/github-actions-logo.png) <h3 style="color: black">Enfin des workflows<br>accessible aux développeurs</h3>
+## Enfin des workflows accessibles aux développeurs
 
 Notes: Bonjour à tous, bienvenue à ce talk sur GitHub Actions. Je vais commencer par me présenter :
