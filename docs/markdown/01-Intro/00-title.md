@@ -1,10 +1,12 @@
 <!-- .slide: class="first-slide" -->
 
-![float-right h-400 mt-100](./assets/images/github-actions-logo.png)
+![float-right h-200 mt-100](./assets/images/github-actions-logo.png)
 
 # GitHub Actions
 
 ## Enfin des workflows accessibles aux développeurs
+
+![openfeedback h-300](./assets/images/qrcode_openfeedback.io.png)
 
 Notes: **Antoine**
 

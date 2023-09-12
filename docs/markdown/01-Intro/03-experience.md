@@ -14,7 +14,7 @@
   </p>
   <p>
     <img class="h-200" src="./assets/images/github-action-logo.png">
-    &nbsp;Antoine&nbsp;⭐️⭐️⭐️⭐️<br/>
+    &nbsp;Antoine&nbsp;⭐️⭐️⭐️⭐️⭐️<br/>
     &nbsp;Romain&nbsp;&nbsp;⭐️⭐️⭐️⭐️⭐️
   </p>
 </div>

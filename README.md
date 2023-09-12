@@ -1,4 +1,4 @@
-# GitHub Actions : enfin des pipelines accessible aux développeurs
+# GitHub Actions : enfin des workflows accessible aux développeurs
 
 ## Slides
 

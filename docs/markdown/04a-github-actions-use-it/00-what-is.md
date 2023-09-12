@@ -129,7 +129,7 @@ Notes: **Romain**
 
 GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc.
 
-Et on peut l'utiliser dans nos pipelines.
+Et on peut l'utiliser dans nos worfklows.
 
 ⚠️ **Next Speaker** Antoine
 
@@ -150,6 +150,19 @@ Et on peut l'utiliser dans nos pipelines.
 - Validate.
 - Merge your branch to the main / master branch.
 <!-- .element: class="list-fragment" -->
+
+Notes: **Antoine**
+
+##==##
+
+# [ReviewDog](https://github.com/reviewdog/reviewdog)
+<br>
+
+## A code review dog who keeps your codebase healthy.
+
+<br>
+
+![reviewdog](./assets/images/reviewdog.png)
 
 Notes: **Antoine**
 
