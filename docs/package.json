@@ -30,7 +30,7 @@
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
     "live-server": "^1.1.0",
-    "parallelshell": "3.0.1",
+    "parallelshell": "3.0.2",
     "sass": "^1.51.0",
     "shelljs": "^0.8.5"
   }
