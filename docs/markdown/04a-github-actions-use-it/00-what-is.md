@@ -175,7 +175,7 @@ Notes: **Antoine**
 
 Notes: **Antoine**
 
-GitHub fourni également des workflow basiques, c'est directement intégré dans l'interface de GitHub, quand vous voulez créer un pipeline sur le site.
+GitHub fourni également des workflow basiques, c'est directement intégré dans l'interface de GitHub, quand vous voulez créer un workflow sur le site.
 
 Et vous pouvez même y contribuer, c'est un repo !
 
@@ -201,9 +201,9 @@ Notes: **Antoine**
 
 On peut trouver les GitHub Action sur la marketplace, une fois l'action créé, on peut la proposer sur la Marketplace de GitHub.
 
-GitHub fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline.
+GitHub fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un workflow.
 
-Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
+Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre workflow.
 
 ##==##
 

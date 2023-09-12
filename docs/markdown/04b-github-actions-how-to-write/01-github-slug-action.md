@@ -42,7 +42,7 @@ Je me suis dit pourquoi ne pas tester la création d'une GitHub Action.
 
 Notes: **Romain**
 
-Ca réponds à cette question : comment extraire des variables d'environnement fourni par GitHub, une variable que l'on puisse utiliser facilement dans un pipeline.
+Ca réponds à cette question : comment extraire des variables d'environnement fourni par GitHub, une variable que l'on puisse utiliser facilement dans un workflow.
 
 ##==##
 

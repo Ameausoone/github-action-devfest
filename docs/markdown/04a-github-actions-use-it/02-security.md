@@ -69,13 +69,13 @@ Dans ce cas, vous êtes sûr d'utiliser une version fixe de la GitHub action.
 
 <br><br>
 
-## Approve run pipeline for [first-time contributors](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)
+## Approve run workflow for [first-time contributors](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks)
 
 ![marketplace](./assets/images/first-time-contributor.png)
 
 Notes: **Antoine**
 
-A l'inverse, quand vous maintenez un projet, désormais, vous devez valider manuellement l'exécution d'un pipeline lorsqu'un contributeur vous propose une PR sur un workflow pour la 1ère fois.
+A l'inverse, quand vous maintenez un projet, désormais, vous devez valider manuellement l'exécution d'un workflow lorsqu'un contributeur vous propose une PR sur un workflow pour la 1ère fois.
 
 ##==##
 
@@ -176,7 +176,7 @@ jobs:
 
 Notes: **Antoine**
 
-Pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre pipeline, pour une durée limitée.
+Pour intéragir avec l'api github, vous avez un TOKEN qui est injecté dans votre workflow, pour une durée limitée.
 
 Pour les PR de repos forké, le TOKEN a des droits read only.
 
@@ -214,7 +214,7 @@ Depuis quelques mois, vous pouvez affiner les droits accorder au github token, v
 
 # Secrets
 
-## Set secrets in your repo settings and inject them in your pipeline.
+## Set secrets in your repo settings and inject them in your workflow.
 
 <br><br>
 
@@ -231,7 +231,7 @@ steps:
 
 Notes: **Antoine**
 
-Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre pipeline.
+Il y a une gestion des secrets, le principe est assez simple vous spécifiez vos secrets dans les settings de votre repo, puis vous les injecter dans votre workflow.
 
 Automatiquement les secrets seront masqués dans les logs.
 

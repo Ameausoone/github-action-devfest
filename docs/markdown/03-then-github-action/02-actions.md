@@ -23,6 +23,6 @@ steps:
 
 Notes: **Romain**
 
-Il s'agit de déléguer une étape d'un pipeline à une GitHub action.
+Il s'agit de déléguer une étape d'un workflow à une GitHub action.
 
 Alors, qu'est-ce qu'une GitHub Action ?
