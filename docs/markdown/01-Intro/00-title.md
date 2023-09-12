@@ -1,8 +1,13 @@
-<!-- .slide: data-background="./assets/images/devfest-nantes-page.png" class="transition top" -->
-<br>
+<!-- .slide: class="first-slide" -->
 
-# **Github Actions**
+![float-right h-400 mt-100](./assets/images/github-actions-logo.png)
 
-![Github Actions's Log](./assets/images/github-actions-logo.png) <h3 style="color: black">Enfin des pipelines<br>accessible aux développeurs</h3>
+# GitHub Actions
 
-Notes: Bonjour à tous, bienvenue à ce talk sur Github Actions. Je vais commencer par me présenter :
+## Enfin des workflows accessibles aux développeurs
+
+Notes: **Antoine**
+
+Bonjour à tous, bienvenue à ce talk sur GitHub Actions.
+
+Je vais commencer par me présenter :

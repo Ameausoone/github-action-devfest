@@ -1,6 +1,6 @@
 <!-- .slide: class="speaker-slide" -->
 
-# Hello Devfest Lille 2021
+# Hello
 
 ![speaker](./assets/images/ameausoone.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
@@ -15,4 +15,12 @@
 
 <!-- .element: class="icon-twitter icon-second" -->
 
-Notes: Je m'appelle Antoine Méausoone, je suis Architecte Cloud chez Sfeir. J'ai un background de développeur Back, puis naturellement passé au DevOps, et au Cloud. J'ai une certaine appétence pour l'automatisation, je suis un fan inconditionnel de l'infra as code et de GitOps.
+Notes: **Antoine**
+
+Je m'appelle **Antoine Méausoone**, je suis Architecte Cloud chez SFEIR.
+
+J'ai un background de développeur Back, puis naturellement passé au DevOps, et au Cloud.
+
+J'ai une certaine appétence pour l'automatisation, je suis un fan inconditionnel de l'infra as code et de GitOps.
+
+⚠️ **Next Speaker** Romain

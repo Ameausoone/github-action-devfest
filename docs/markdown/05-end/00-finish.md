@@ -1,13 +1,7 @@
 
-
-# OpenFeedback
-
-![default h-600 center](./assets/images/openfeedback.png)
-
-##==##
-
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Thx !
 
+![survey](./assets/images/qrcode_openfeedback.io.png)
 
-Notes: 46:22:24
+Notes: **Antoine** (46:22:24)

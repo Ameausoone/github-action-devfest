@@ -1,45 +1,63 @@
 
-# What is a Github Action ?
+# What is a GitHub Action ?
 <br><br>
-* Unit action
+
+* Standalone action
 * With Inputs and Outputs
 * With documentation `README.md` !
-* Easily interact with Pipeline, git and Github API
+* Easily interact with the workflow, git and GitHub API
 <!-- .element: class="list-fragment" -->
 
-Notes: 15:02:24 C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace. qui va effectué une tâche, idéalement bien testé, généralement bien documenté.
+Notes: **Romain** (15:02:24)
+
+C'est une action unitaire, avec des entrées/sorties, qui a accès au workspace, qui va effectuée une tâche, idéalement bien testé, généralement bien documenté.
 
 ##==##
 
-# How to call a Github Action ?
+# How to call a GitHub Action ?
 <!-- .slide: class="full-center" -->
 ![call h-700](./assets/images/call-an-action.png)
 
-Notes: Pour utiliser une github action, il suffit de référencer le repo, par défaut, ça utilise la branche par défaut, mais on peut spécifier une autre branche, un tag, ou un commitId, on va voir plus loin l'intérêt que ça a. ... Alors Github fourni une série de Github action
+Notes: **Romain**
+
+Pour utiliser une GitHub action, référencer le repo.
+
+⚠️ ça utilise la branche par défaut, mais on peut spécifier une autre reference (branche, un tag, ou un commitId).
+On va voir plus loin l'intérêt que cela a.
+
+Alors GitHub fourni une série de GitHub actions
 
 ##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Out of the box
 
-Notes: Qu'est-ce que Github propose out ot the box pour utiliser github Actions
+Notes: **Romain**
+
+Qu'est-ce que GitHub propose "out ot the box" pour utiliser GitHub actions
 
 ##==##
 
-# "Builtin" actions
+# Official GitHub actions
 <br>
 
-## Github provides a lot of actions
+## GitHub provides a lot of actions
 
 <br>
 
 - [actions/checkout](https://github.com/actions/checkout) - _Setup your repository on your workflow._
 - [actions/cache](https://github.com/actions/cache) - _Cache dependencies and build outputs in GitHub Actions._
 - [github/super-linter](https://github.com/github/super-linter) - _Linter for a lot of languages_
-- [github/codeql-action](https://github.com/github/codeql-action) - _Run Codeql_
+- [github/codeql-action](https://github.com/github/codeql-action) - _Detect security vulnerabilies_
 - [...]
 <!-- .element: class="list-fragment" -->
 
-Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour installer vos dépendances, pour java, node, python etc. Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
+Notes: **Romain**
+
+Il y a bcp d'actions fournies par GitHub nativement.
+
+Notamment pour installer vos dépendances, pour java, node, python etc.
+
+Il y a également un linter. Je vais faire un petit focus sur le fonctionnement des actions "setup-"
 
 ##==##
 # "Setup" Actions
@@ -55,22 +73,26 @@ Notes: Il y a bcp d'actions fournies par Github nativement. Notamment pour insta
   - [elixir](https://github.com/actions/setup-elixir)
 <!-- .element: class="list-fragment" -->
 
-Notes: vous avez la liste des sdk disponible dans vos github actions fourni par Github actions. 
+Notes: **Romain**
+
+Vous avez la liste des SDK disponible dans vos GitHub actions fourni par GitHub.
+
 ##==##
 
 # Closer look to setup-*
 <!-- .slide: class="full-center" -->
 ![call h-800](./assets/images/setup-action.png)
 
-Notes: 18:10:24 C'est une convention dans les actions github, une action setup- va installer l'application directement sur le runner, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
+Notes: **Romain** (18:10:24)
+
+C'est une convention dans les actions github, une action `setup-*` va installer l'application directement sur le runner, avec la version que vous avez choisi, et vous pouvez du coup cumuler facilement différentes versions d'outils.
 
 ##==##
 
-# Github Automation
+# GitHub Automation
 
 - [actions/](https://github.com/actions/)
   - [upload-artifact](https://github.com/actions/upload-artifact) - _Upload artifacts from your workflow._
-  - [cache](https://github.com/actions/cache) - _Manage cache._
   - [github-script](https://github.com/actions/github-script) - _Write a script for GitHub API and the workflow contexts._
   - [create-release](https://github.com/actions/create-release) - _An Action to create releases via the GitHub Release API_.
   - [upload-release-asset](https://github.com/actions/upload-release-asset) - _An Action to upload a release asset via the GitHub Release API_.
@@ -80,7 +102,56 @@ Notes: 18:10:24 C'est une convention dans les actions github, une action setup- 
   - [delete-package-versions](https://github.com/actions/delete-package-versions) - _Delete versions of a package from GitHub Packages_.
 <!-- .element: class="list-fragment" -->
 
-Notes: D'autres exemples de github actions: comme upload artifact, download-artifact. Create release qui comme son nom l'indique qui va créer une release github ou comme github-script. ➡️ Et pour vous faciliter la tâche, il y a également des 
+Notes: **Romain**
+
+D'autres exemples de github actions: comme upload artifact, download-artifact.
+
+Create release qui comme son nom l'indique qui va créer une release github ou comme github-script.
+
+➡️ Et pour vous faciliter la tâche, GitHub ne s'arrête pas là
+
+##==##
+
+# 'gh' CLI
+<br>
+
+## GitHub also provides a CLI : `gh`
+
+<br>
+
+- `gh repo clone` - _Clone a repository locally_
+- `gh pr create` - _Create a pull request_
+- `gh workflow run` - _Run a workflow_
+- `gh issue create` - _Create an issue_
+<!-- .element: class="list-fragment" -->
+
+Notes: **Romain**
+
+GitHub fourni également un CLI, qui permet de faire des actions sur GitHub, comme cloner un repo, créer une PR, lancer un workflow, créer une issue, etc.
+
+Et on peut l'utiliser dans nos pipelines.
+
+⚠️ **Next Speaker** Antoine
+
+##==##
+
+# Issue Ops
+<br>
+
+## [Enabling branch deployments through IssueOps with GitHub Actions](https://github.blog/2023-02-02-enabling-branch-deployments-through-issueops-with-github-actions/)
+
+<br>
+
+- Create a branch.
+- Add commits to your branch.
+- Open a pull request.
+- Gather feedback plus peer reviews.
+- Deploy your change.
+- Validate.
+- Merge your branch to the main / master branch.
+<!-- .element: class="list-fragment" -->
+
+Notes: **Antoine**
 
 ##==##
 
@@ -89,15 +160,23 @@ Notes: D'autres exemples de github actions: comme upload artifact, download-arti
 
 ![marketplace h-700 center](./assets/images/starter-workflows.png)
 
-Notes: Github fourni également des workflow basiques, c'est directement intégré dans l'interface de Github, quand vous voulez créer un pipeline sur le site. Et vous pouvez même y contribuer, c'est un repo !
+Notes: **Antoine**
+
+GitHub fourni également des workflow basiques, c'est directement intégré dans l'interface de GitHub, quand vous voulez créer un pipeline sur le site.
+
+Et vous pouvez même y contribuer, c'est un repo !
 
 ##==##
 <!-- .slide: class="transition sfeir-bg-red" -->
 # Or by the community...
 
-You can develop your own Github action !!!
+You can develop your own GitHub action !!!
 
-Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant, on peut développer ses propres Github action ! ... 2 possibilités
+Notes: **Antoine** (28:26:40)
+
+On peut développer ses propres GitHub action ! 🎉
+
+2 possibilités
 
 ##==##
 
@@ -105,7 +184,13 @@ Notes: 28:26:40 et donc c'est là où Github Actions devient très intéressant,
 
 ![marketplace h-700 center](./assets/images/marketplace.png)
 
-Notes: On peut trouver les Github Action sur la marketplace, une fois l'action créé, on peut  la proposer sur la Marketplace de Github. Github fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline. Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
+Notes: **Antoine**
+
+On peut trouver les GitHub Action sur la marketplace, une fois l'action créé, on peut la proposer sur la Marketplace de GitHub.
+
+GitHub fait remonter dans la liste les actions qui ont le plus d'étoiles, donc n'hésitez pas à ajouter un like quand vous utilisez un pipeline.
+
+Pour info, une action n'a pas besoin d'être sur le marketplace pour être utilisable dans votre pipeline.
 
 ##==##
 
@@ -117,14 +202,4 @@ Notes: On peut trouver les Github Action sur la marketplace, une fois l'action c
 - [aws-actions](https://github.com/aws-actions) - _AWS_
 <!-- .element: class="list-fragment" -->
 
-Notes: 21:18:24
-
-##==##
-
-# [sdras/awesome-actions](https://github.com/sdras/awesome-actions)
-
-##  A curated list of awesome actions to use on GitHub
-
-![marketplace h-700 center](./assets/images/awesome-actions.png)
-
-Notes: Un petit focus sur awesome-actions, c'est un projet qui a commencé très tôt sur les Github actions. Qui liste des github actions intéressante. Je trouve que c'est un bon point d'entrée pour découvrir des github actions communautaires. ➡️ Oui là c'est le moment de vous faire une petite démo
+Notes: **Antoine** (21:18:24)
