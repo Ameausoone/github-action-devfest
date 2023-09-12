@@ -121,6 +121,16 @@ Notes: **Romain**
 
 Alors je vous ai dit vous pouvez référencer un tag ou une branche, vous pouvez simplement utiliser une branche jusqu'au prochain breaking change, et ensuite passer à la branche suivante.
 
+##==##
+
+# Advise | Latest implementation
+
+![center](./assets/images/github-slug-composite.png)
+
+Notes: **Romain**
+
+Changer de type d'action pour la 3e fois est considéré comme un breaking change
+
 ➡️ et un dernier conseil, peut-être le plus important !
 
 ##==##
