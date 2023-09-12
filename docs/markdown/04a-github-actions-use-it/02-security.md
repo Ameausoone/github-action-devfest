@@ -97,12 +97,6 @@ A l'inverse, quand vous maintenez un projet, désormais, vous devez valider manu
 - uses: owner/repo@v2f05f8b5cbdfb8b37e68426a162be978e4e82550 # commit reference
 ```
 
-```yaml
-# not safe at all
-- uses: owner/repo
-# use default branch
-```
-
 <!-- .element: class="big-code" -->
 
 Notes: **Antoine**
